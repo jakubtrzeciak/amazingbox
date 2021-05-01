@@ -1,0 +1,9 @@
+
+.icon-basket:before { content: '\e800'; } /* '' */
+.icon-star:before { content: '\e801'; } /* '' */
+.icon-heart:before { content: '\e802'; } /* '' */
+.icon-gift:before { content: '\e803'; } /* '' */
+.icon-credit-card:before { content: '\e804'; } /* '' */
+.icon-cancel:before { content: '\e805'; } /* '' */
+.icon-puzzle:before { content: '\f12e'; } /* '' */
+.icon-hourglass-2:before { content: '\f252'; } /* '' */

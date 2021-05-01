@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="179.27" height="173" viewBox="0 0 179.27 173">
+  <defs>
+    <clipPath id="clip-logo-mobile">
+      <rect width="179.27" height="173"/>
+    </clipPath>
+  </defs>
+  <g id="logo-mobile" clip-path="url(#clip-logo-mobile)">
+    <rect width="179.27" height="173" fill="#fff"/>
+    <g id="Group_47" data-name="Group 47" transform="translate(-814.002 -164.27)">
+      <rect id="Rectangle_13" data-name="Rectangle 13" width="147.436" height="140.854" transform="translate(829.925 180.674)" fill="#fafafa"/>
+      <g id="Group_4" data-name="Group 4" transform="translate(824.002 174.269)">
+        <line id="Line_1" data-name="Line 1" x2="140.587" transform="translate(0 146.596)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
+        <line id="Line_2" data-name="Line 2" x2="140.587" transform="translate(11.06 153.654)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
+        <line id="Line_3" data-name="Line 3" y2="108.128" transform="translate(158.804 22.587)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
+        <line id="Line_4" data-name="Line 4" y2="128.42" transform="translate(151.647 17.294)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
+        <line id="Line_5" data-name="Line 5" x1="140.587" transform="translate(18.217 7.058)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
+        <line id="Line_6" data-name="Line 6" x1="140.587" transform="translate(7.157)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
+        <line id="Line_7" data-name="Line 7" y1="107.777" transform="translate(0 22.938)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
+        <line id="Line_8" data-name="Line 8" y1="128.42" transform="translate(7.157 7.94)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
+      </g>
+      <g id="Group_6" data-name="Group 6" transform="translate(856.75 193.182)">
+        <g id="Group_5" data-name="Group 5" transform="translate(28.673 0)">
+          <line id="Line_9" data-name="Line 9" y2="103.419" transform="translate(6.302 5.861)" fill="none" stroke="#900000" stroke-linecap="round" stroke-width="3"/>
+          <path id="Path_3" data-name="Path 3" d="M0,0V115.829" transform="translate(0)" fill="none" stroke="#900000" stroke-linecap="round" stroke-width="3"/>
+          <g id="Group_1" data-name="Group 1" transform="translate(11.285 0.184)">
+            <path id="Path_2" data-name="Path 2" d="M0,.084C4.2.155,31.829-3.2,35.69,21.962c2.14,16.733-12.876,22.362-24.355,24.68A108.971,108.971,0,0,1,0,48.287" transform="translate(0 0.029)" fill="none" stroke="#900000" stroke-linecap="round" stroke-width="3"/>
+            <path id="Path_4" data-name="Path 4" d="M0,.053C3.191.1,24.16-2.317,27.09,15.86,29.616,34.662.045,34.992.045,34.992" transform="translate(0.882 6.112)" fill="none" stroke="#900000" stroke-linecap="round" stroke-width="3"/>
+          </g>
+          <g id="Group_2" data-name="Group 2" transform="translate(11.285 47.799)">
+            <path id="Path_2-2" data-name="Path 2" d="M0,.133S50.481-8.438,53.28,28.39C55.567,67,2.721,67.3,2.113,67.3" transform="translate(0 0.732)" fill="none" stroke="#900000" stroke-linecap="round" stroke-width="3"/>
+          </g>
+          <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(10.146 55.446)" fill="#fff" stroke="#900000" stroke-linecap="round" stroke-width="4">
+            <ellipse cx="24.262" cy="23.379" rx="24.262" ry="23.379" stroke="none"/>
+            <ellipse cx="24.262" cy="23.379" rx="22.262" ry="21.379" fill="none"/>
+          </g>
+          <g id="Group_3" data-name="Group 3" transform="translate(23.636 68.641)">
+            <line id="Line_10" data-name="Line 10" x2="21.326" y2="21.326" fill="none" stroke="#000" stroke-linecap="round" stroke-width="4"/>
+            <line id="Line_11" data-name="Line 11" x1="21.326" y2="21.326" fill="none" stroke="#000" stroke-linecap="round" stroke-width="4"/>
+          </g>
+        </g>
+        <text id="AMAZING" transform="translate(19 107.914) rotate(-90)" font-size="22" font-family="GillSansMT, Gill Sans MT"><tspan x="0" y="0">AMAZING</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
