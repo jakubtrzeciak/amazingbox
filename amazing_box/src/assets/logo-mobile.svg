@@ -1,13 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="179.27" height="173" viewBox="0 0 179.27 173">
   <defs>
-    <clipPath id="clip-logo-mobile">
+    <clipPath id="clip-logo-mobile_nobg">
       <rect width="179.27" height="173"/>
     </clipPath>
   </defs>
-  <g id="logo-mobile" clip-path="url(#clip-logo-mobile)">
-    <rect width="179.27" height="173" fill="#fff"/>
+  <g id="logo-mobile_nobg" data-name="logo-mobile – nobg" clip-path="url(#clip-logo-mobile_nobg)">
     <g id="Group_47" data-name="Group 47" transform="translate(-814.002 -164.27)">
-      <rect id="Rectangle_13" data-name="Rectangle 13" width="147.436" height="140.854" transform="translate(829.925 180.674)" fill="#fafafa"/>
+      <rect id="Rectangle_13" data-name="Rectangle 13" width="147.436" height="140.854" transform="translate(829.925 180.674)" fill="none"/>
       <g id="Group_4" data-name="Group 4" transform="translate(824.002 174.269)">
         <line id="Line_1" data-name="Line 1" x2="140.587" transform="translate(0 146.596)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
         <line id="Line_2" data-name="Line 2" x2="140.587" transform="translate(11.06 153.654)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
@@ -29,7 +28,7 @@
           <g id="Group_2" data-name="Group 2" transform="translate(11.285 47.799)">
             <path id="Path_2-2" data-name="Path 2" d="M0,.133S50.481-8.438,53.28,28.39C55.567,67,2.721,67.3,2.113,67.3" transform="translate(0 0.732)" fill="none" stroke="#900000" stroke-linecap="round" stroke-width="3"/>
           </g>
-          <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(10.146 55.446)" fill="#fff" stroke="#900000" stroke-linecap="round" stroke-width="4">
+          <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(10.146 55.446)" fill="none" stroke="#900000" stroke-linecap="round" stroke-width="4">
             <ellipse cx="24.262" cy="23.379" rx="24.262" ry="23.379" stroke="none"/>
             <ellipse cx="24.262" cy="23.379" rx="22.262" ry="21.379" fill="none"/>
           </g>

@@ -4,11 +4,11 @@
       <div class="centerNav uk-margin-auto uk-flex uk-flex-center uk-text-center">
         <router-link to="/" v-scroll-to="'#home'">OFERTA</router-link>
         <router-link to="/" v-scroll-to="'#home'">KONTAKT</router-link>
-        <router-link to="/" v-scroll-to="'#home'">O NAS</router-link>
+        <router-link to="/" v-scroll-to="'#aboutus'">O NAS</router-link>
         <router-link class="red" to="/kupuj">SKLEP <i class="icon-basket"></i></router-link>
       </div>
     </div>
-    <div id="navMobile" class="uk-hidden@m">
+    <div id="navMobile" class="uk-hidden@m"  uk-sticky>
       <router-link class="red" to="/kupuj">SKLEP <i class="icon-basket"></i></router-link>
       <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-flip">
       &lt; MENU
@@ -39,6 +39,12 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #3B3B3B;
+  background-color: #FAFAFA;
+  background-image: url('assets/background.svg');
+
+  @media (min-width: 768px) {
+    background-position: center;
+  }
 
   .red {
     color: #900000;
@@ -49,6 +55,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  background-color: #fafafa;
 
   a, button {
     padding: 10px 30px;
@@ -74,7 +81,6 @@
 
 #nav {
   padding: 30px;
-  background: white;
   font-size: 1.4em;
 
   .centerNav {

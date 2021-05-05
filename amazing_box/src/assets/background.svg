@@ -1,0 +1,409 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-background">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="background" clip-path="url(#clip-background)">
+    <g id="Group_4" data-name="Group 4" transform="translate(78.387 18.368) rotate(65)">
+      <line id="Line_1" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_12" data-name="Group 12" transform="translate(101.438 223.612) rotate(65)">
+      <line id="Line_1-2" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-2" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-2" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-2" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-2" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-2" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-2" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-2" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_13" data-name="Group 13" transform="translate(131.704 410.211) rotate(65)">
+      <line id="Line_1-3" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-3" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-3" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-3" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-3" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-3" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-3" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-3" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_14" data-name="Group 14" transform="translate(272.887 201.103) rotate(65)">
+      <line id="Line_1-4" data-name="Line 1" x2="55.802" transform="translate(0 91.268)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-4" data-name="Line 2" x2="86.496" transform="translate(7.93 96.329)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-4" data-name="Line 3" y2="63.688" transform="translate(99.558 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-4" data-name="Line 4" y2="48.538" transform="translate(94.426 42.098)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-4" data-name="Line 5" x1="55.802" transform="translate(43.756 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-4" data-name="Line 6" x1="86.496" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-4" data-name="Line 7" y1="63.436" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-4" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_15" data-name="Group 15" transform="translate(281.994 457.065) rotate(65)">
+      <line id="Line_1-5" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-5" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-5" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-5" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-5" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-5" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-5" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-5" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_16" data-name="Group 16" transform="translate(312.26 661.247) rotate(65)">
+      <line id="Line_1-6" data-name="Line 1" x2="85.808" transform="translate(0 94.677)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-6" data-name="Line 2" x2="85.808" transform="translate(12.194 102.459)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-6" data-name="Line 3" y2="52.266" transform="translate(105.893 24.903)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-6" data-name="Line 4" y2="74.638" transform="translate(98.003 19.067)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-6" data-name="Line 5" x1="85.808" transform="translate(20.085 7.781)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-6" data-name="Line 6" x1="85.808" transform="translate(7.89 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-6" data-name="Line 7" y1="51.879" transform="translate(0 25.29)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-6" data-name="Line 8" y1="74.638" transform="translate(7.89 8.754)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_17" data-name="Group 17" transform="translate(457.011 535.338) rotate(65)">
+      <line id="Line_1-7" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-7" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-7" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-7" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-7" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-7" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-7" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-7" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_18" data-name="Group 18" transform="translate(486.845 738.633) rotate(65)">
+      <line id="Line_1-8" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-8" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-8" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-8" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-8" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-8" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-8" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-8" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_19" data-name="Group 19" transform="translate(526.016 925.232) rotate(65)">
+      <line id="Line_1-9" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-9" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-9" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-9" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-9" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-9" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-9" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-9" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_20" data-name="Group 20" transform="translate(440.737 332.043) rotate(65)">
+      <line id="Line_1-10" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-10" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-10" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-10" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-10" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-10" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-10" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-10" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_21" data-name="Group 21" transform="translate(136.015 613.506) rotate(65)">
+      <line id="Line_1-11" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-11" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-11" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-11" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-11" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-11" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-11" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-11" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_79" data-name="Group 79" transform="translate(615.505 41.283) rotate(65)">
+      <line id="Line_1-12" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-12" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-12" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-12" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-12" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-12" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-12" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-12" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_80" data-name="Group 80" transform="translate(638.556 246.527) rotate(65)">
+      <line id="Line_1-13" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-13" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-13" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-13" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-13" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-13" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-13" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-13" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_81" data-name="Group 81" transform="translate(668.822 433.126) rotate(65)">
+      <line id="Line_1-14" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-14" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-14" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-14" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-14" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-14" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-14" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-14" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_82" data-name="Group 82" transform="translate(810.006 224.018) rotate(65)">
+      <line id="Line_1-15" data-name="Line 1" x2="55.802" transform="translate(0 91.268)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-15" data-name="Line 2" x2="86.496" transform="translate(7.93 96.329)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-15" data-name="Line 3" y2="63.688" transform="translate(99.558 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-15" data-name="Line 4" y2="48.538" transform="translate(94.426 42.098)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-15" data-name="Line 5" x1="55.802" transform="translate(43.756 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-15" data-name="Line 6" x1="86.496" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-15" data-name="Line 7" y1="63.436" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-15" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_83" data-name="Group 83" transform="translate(819.113 479.981) rotate(65)">
+      <line id="Line_1-16" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-16" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-16" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-16" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-16" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-16" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-16" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-16" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_84" data-name="Group 84" transform="translate(849.378 684.162) rotate(65)">
+      <line id="Line_1-17" data-name="Line 1" x2="85.808" transform="translate(0 94.677)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-17" data-name="Line 2" x2="85.808" transform="translate(12.194 102.459)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-17" data-name="Line 3" y2="52.266" transform="translate(105.893 24.903)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-17" data-name="Line 4" y2="74.638" transform="translate(98.003 19.067)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-17" data-name="Line 5" x1="85.808" transform="translate(20.085 7.781)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-17" data-name="Line 6" x1="85.808" transform="translate(7.89 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-17" data-name="Line 7" y1="51.879" transform="translate(0 25.29)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-17" data-name="Line 8" y1="74.638" transform="translate(7.89 8.754)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_85" data-name="Group 85" transform="translate(994.13 558.253) rotate(65)">
+      <line id="Line_1-18" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-18" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-18" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-18" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-18" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-18" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-18" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-18" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_86" data-name="Group 86" transform="translate(1023.963 761.548) rotate(65)">
+      <line id="Line_1-19" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-19" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-19" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-19" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-19" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-19" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-19" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-19" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_87" data-name="Group 87" transform="translate(1063.134 948.147) rotate(65)">
+      <line id="Line_1-20" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-20" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-20" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-20" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-20" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-20" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-20" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-20" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_88" data-name="Group 88" transform="translate(977.855 354.958) rotate(65)">
+      <line id="Line_1-21" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-21" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-21" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-21" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-21" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-21" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-21" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-21" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_89" data-name="Group 89" transform="translate(673.133 636.421) rotate(65)">
+      <line id="Line_1-22" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-22" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-22" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-22" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-22" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-22" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-22" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-22" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_90" data-name="Group 90" transform="translate(1173.09 36.621) rotate(65)">
+      <line id="Line_1-23" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-23" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-23" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-23" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-23" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-23" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-23" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-23" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_91" data-name="Group 91" transform="translate(1196.141 241.865) rotate(65)">
+      <line id="Line_1-24" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-24" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-24" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-24" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-24" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-24" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-24" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-24" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_92" data-name="Group 92" transform="translate(1226.407 428.464) rotate(65)">
+      <line id="Line_1-25" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-25" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-25" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-25" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-25" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-25" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-25" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-25" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_93" data-name="Group 93" transform="translate(1367.591 219.356) rotate(65)">
+      <line id="Line_1-26" data-name="Line 1" x2="55.802" transform="translate(0 91.268)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-26" data-name="Line 2" x2="86.496" transform="translate(7.93 96.329)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-26" data-name="Line 3" y2="63.688" transform="translate(99.558 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-26" data-name="Line 4" y2="48.538" transform="translate(94.426 42.098)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-26" data-name="Line 5" x1="55.802" transform="translate(43.756 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-26" data-name="Line 6" x1="86.496" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-26" data-name="Line 7" y1="63.436" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-26" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_94" data-name="Group 94" transform="translate(1376.698 475.319) rotate(65)">
+      <line id="Line_1-27" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-27" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-27" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-27" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-27" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-27" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-27" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-27" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_95" data-name="Group 95" transform="translate(1406.963 679.5) rotate(65)">
+      <line id="Line_1-28" data-name="Line 1" x2="85.808" transform="translate(0 94.677)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-28" data-name="Line 2" x2="85.808" transform="translate(12.194 102.459)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-28" data-name="Line 3" y2="52.266" transform="translate(105.893 24.903)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-28" data-name="Line 4" y2="74.638" transform="translate(98.003 19.067)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-28" data-name="Line 5" x1="85.808" transform="translate(20.085 7.781)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-28" data-name="Line 6" x1="85.808" transform="translate(7.89 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-28" data-name="Line 7" y1="51.879" transform="translate(0 25.29)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-28" data-name="Line 8" y1="74.638" transform="translate(7.89 8.754)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_96" data-name="Group 96" transform="translate(1551.715 553.591) rotate(65)">
+      <line id="Line_1-29" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-29" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-29" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-29" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-29" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-29" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-29" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-29" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_97" data-name="Group 97" transform="translate(1581.548 756.886) rotate(65)">
+      <line id="Line_1-30" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-30" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-30" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-30" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-30" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-30" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-30" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-30" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_98" data-name="Group 98" transform="translate(1620.719 943.485) rotate(65)">
+      <line id="Line_1-31" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-31" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-31" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-31" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-31" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-31" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-31" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-31" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_99" data-name="Group 99" transform="translate(1535.44 350.296) rotate(65)">
+      <line id="Line_1-32" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-32" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-32" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-32" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-32" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-32" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-32" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-32" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_100" data-name="Group 100" transform="translate(1230.718 631.759) rotate(65)">
+      <line id="Line_1-33" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-33" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-33" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-33" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-33" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-33" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-33" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-33" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_101" data-name="Group 101" transform="translate(1691.504 36.621) rotate(65)">
+      <line id="Line_1-34" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-34" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-34" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-34" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-34" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-34" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-34" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-34" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_102" data-name="Group 102" transform="translate(1714.555 241.865) rotate(65)">
+      <line id="Line_1-35" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-35" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-35" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-35" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-35" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-35" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-35" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-35" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_103" data-name="Group 103" transform="translate(1744.821 428.464) rotate(65)">
+      <line id="Line_1-36" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-36" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-36" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-36" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-36" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-36" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-36" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-36" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_104" data-name="Group 104" transform="translate(1886.005 219.356) rotate(65)">
+      <line id="Line_1-37" data-name="Line 1" x2="55.802" transform="translate(0 91.268)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-37" data-name="Line 2" x2="86.496" transform="translate(7.93 96.329)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-37" data-name="Line 3" y2="63.688" transform="translate(99.558 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-37" data-name="Line 4" y2="48.538" transform="translate(94.426 42.098)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-37" data-name="Line 5" x1="55.802" transform="translate(43.756 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-37" data-name="Line 6" x1="86.496" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-37" data-name="Line 7" y1="63.436" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-37" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_105" data-name="Group 105" transform="translate(1895.112 475.319) rotate(65)">
+      <line id="Line_1-38" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-38" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-38" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-38" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-38" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-38" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-38" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-38" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_106" data-name="Group 106" transform="translate(1925.377 679.5) rotate(65)">
+      <line id="Line_1-39" data-name="Line 1" x2="85.808" transform="translate(0 94.677)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-39" data-name="Line 2" x2="85.808" transform="translate(12.194 102.459)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-39" data-name="Line 3" y2="52.266" transform="translate(105.893 24.903)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-39" data-name="Line 4" y2="74.638" transform="translate(98.003 19.067)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-39" data-name="Line 5" x1="85.808" transform="translate(20.085 7.781)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-39" data-name="Line 6" x1="85.808" transform="translate(7.89 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-39" data-name="Line 7" y1="51.879" transform="translate(0 25.29)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-39" data-name="Line 8" y1="74.638" transform="translate(7.89 8.754)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_111" data-name="Group 111" transform="translate(1749.132 631.759) rotate(65)">
+      <line id="Line_1-40" data-name="Line 1" x2="55.802" transform="translate(0 61.569)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_2-40" data-name="Line 2" x2="55.802" transform="translate(7.93 66.63)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_3-40" data-name="Line 3" y2="33.989" transform="translate(68.863 16.194)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_4-40" data-name="Line 4" y2="48.538" transform="translate(63.732 12.399)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_5-40" data-name="Line 5" x1="55.802" transform="translate(13.061 5.06)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_6-40" data-name="Line 6" x1="55.802" transform="translate(5.131 0)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_7-40" data-name="Line 7" y1="33.737" transform="translate(0 16.446)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_8-40" data-name="Line 8" y1="48.538" transform="translate(5.131 5.693)" fill="none" stroke="rgba(235,216,197,0.5)" stroke-linecap="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
