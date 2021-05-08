@@ -2,9 +2,9 @@
   <div id="app">
     <div id="nav" class="uk-margin-auto uk-visible@m">
       <div class="centerNav uk-margin-auto uk-flex uk-flex-center uk-text-center">
-        <router-link to="/" v-scroll-to="'#home'">OFERTA</router-link>
-        <router-link to="/" v-scroll-to="'#home'">KONTAKT</router-link>
-        <router-link to="/" v-scroll-to="'#aboutus'">O NAS</router-link>
+        <router-link to="/" v-scroll-to="'#aboutus'">OFERTA</router-link>
+        <router-link to="/" v-scroll-to="'#contactus'">KONTAKT</router-link>
+        <router-link to="/" v-scroll-to="'#offer'">O NAS</router-link>
         <router-link class="red" to="/kupuj">SKLEP <i class="icon-basket"></i></router-link>
       </div>
     </div>
@@ -20,9 +20,9 @@
             <button class="uk-offcanvas-close" type="button" uk-close></button>
 
             <ul>
-              <li><router-link to="/" v-scroll-to="'#home'">OFERTA</router-link></li>
-              <li><router-link to="/" v-scroll-to="'#home'">KONTAKT</router-link></li>
-              <li><router-link to="/" v-scroll-to="'#home'">O NAS</router-link></li>
+              <li><router-link to="/" v-scroll-to="'#aboutus'">OFERTA</router-link></li>
+              <li><router-link to="/" v-scroll-to="'#contactus'">KONTAKT</router-link></li>
+              <li><router-link to="/" v-scroll-to="'#offer'">O NAS</router-link></li>
             </ul>
 
         </div>
@@ -48,6 +48,12 @@
 
   .red {
     color: #900000;
+  }
+}
+
+.uk-sticky-placeholder {
+  @media (min-width: 960px) {
+     display: none;
   }
 }
 
@@ -80,8 +86,9 @@
 }
 
 #nav {
-  padding: 30px;
-  font-size: 1.4em;
+  padding: 10px 30px 30px 30px;
+  font-size: 1.3em;
+  background-color: none;
 
   .centerNav {
     width: 55%;

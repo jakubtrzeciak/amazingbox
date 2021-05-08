@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <div class="home uk-flex uk-flex-column uk-flex-center">
       <figure>
         <img src="../assets/logo-mobile.svg" alt="Pudełeczko">
@@ -10,40 +10,56 @@
       <TopSliderMobile class="uk-hidden@s"></TopSliderMobile>
     </div>
     <div id="aboutus">
-      <div v-for="item in aboutInfo" :key="item.el" :id="item.id" :data-name="item.name"
-      class="uk-background-fixed uk-height-large uk-background-cover uk-overflow-hidden
-      uk-light uk-flex uk-flex-top uk-background-blend-screen uk-background-secondary">
-        <div class="uk-width-1-2@m uk-text-center
-        uk-margin-auto uk-margin-auto-vertical">
-            <h3 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;"
-            class="uk-heading-small">{{item.h3}}</h3>
-            <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;"
-            class="uk-text-primary uk-padding-small">{{item.par}}</p>
+    <!-- underneath desktop version -->
+      <div v-for="item in aboutInfo" :key="item.el" :data-name="item.name"
+      class="item desktop uk-background-fixed uk-height-large uk-background-cover
+      uk-overflow-hidden uk-light uk-background-blend-screen
+      uk-background-secondary" uk-scrollspy="cls: uk-animation-fade;
+      repeat: true" :class="item.id" uk-parallax="opacity: 0,1">
+        <div class="blackContainer"  uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+          <h3>{{item.h3}}</h3>
+          <p>{{item.par}}</p>
         </div>
       </div>
     </div>
-    <!--<div id="ph2" class="uk-background-fixed uk-height-large uk-background-cover
-    uk-overflow-hidden
-     uk-light uk-flex uk-flex-top">
-      <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-          <h3 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;"
-          class="uk-heading-medium">Headline</h3>
-          <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua.</p>
+    <div id="contactus">
+      <div class="pos">
+        <h2 class="head">MASZ PYTANIE?</h2>
+        <Email></Email>
       </div>
     </div>
-    <div id="ph3" class="uk-background-fixed uk-height-large uk-background-cover
-    uk-overflow-hidden
-     uk-light uk-flex uk-flex-top">
-      <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-          <h3 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;"
-          class="uk-heading-medium">Headline</h3>
-          <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua.</p>
+    <div id="info">
+      <div class="uk-height-large uk-background-fixed uk-background-cover uk-light
+      uk-flex uk-flex-top" uk-scrollspy="cls: uk-animation-fade; delay: 200;
+      repeat: true;">
+        <p class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+        <q uk-scrollspy="cls: uk-animation-fade; delay: 250; repeat: true;">
+        Moja ścieżka zawodowa zaprowadziła mnie właśnie do tego
+        miejsca, w którym chcę rozwijać swoją pasję i kreatywność.
+        Nic nie daje mi takiej satysfakcji jak kontakt z klientem
+        oraz pomoc w organizacji wyjątkowego prezentu.</q></p>
       </div>
-    </div>-->
+    </div>
+    <div id="offer">
+      <div class="pos uk-child-width-1-3@m" uk-grid
+      uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 100; repeat: true">
+        <div v-for="item in offerInfo" :key="item.el">
+            <div class="uk-card uk-card-default uk-card-body">
+                <i :class="item.icon_name"></i>
+                <p>{{item.par}}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="finish">
+      <h4>Spodobała Ci się moja oferta?</h4>
+      <h5>Odwiedź nasz sklep online!</h5>
+      <a class="button" href="#/kupuj">WEJDŹ</a>
+      <div class="production">
+        <p>&copy; 2021 AmazingBox.pl</p>
+        <p>Produkcja: <a href="https://eyewebcompany.pl">Eye Web Company</a></p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -53,20 +69,24 @@
   @media (min-width: 321px) and (max-width: 768px) {
     height: 85vh;
   }
+
+  @media (min-width: 1500px) {
+    height: 85vh;
+  }
 }
 
-#ph1 {
+.ph1 {
   background-image: url('../assets/photos/about_photos/z6.jpg');
   height: 100vh;
 }
 
-#ph2 {
+.ph2 {
   background-image: url('../assets/photos/about_photos/z2.jpg');
   height: 100vh;
 }
 
-#ph3 {
-  background-image: url('../assets/photos/about_photos/z5.jpg');
+.ph3 {
+  background-image: url('../assets/photos/about_photos/z3.jpg');
   height: 100vh;
 }
 
@@ -98,12 +118,191 @@ h2 {
     font-weight: 400;
     margin-bottom: 1em;
   }
+
+  &.head {
+    color: #3b3b3b;
+    font-size: 2.1em;
+    margin: auto;
+    padding: 12px 0;
+  }
+}
+
+#contactus, #aboutus > .desktop {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .pos {
+    @media (min-width: 1366px) {
+      width: 45%;
+    }
+  }
+}
+
+#aboutus {
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+
+  .item {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+#aboutus > .desktop {
+  justify-content: flex-end;
+
+  .blackContainer {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0,0,0, .15);
+
+    @media (max-width: 960px) {
+      width: 100%;
+      background-color: rgba(0,0,0,0);
+    }
+
+    h3 {
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+
+    p {
+      padding: 0 2.5em;
+      font-size: 1.3em;
+      color: #ffffff;
+    }
+  }
+}
+
+#info {
+  div {
+    height: 100vh;
+    background-image: url('../assets/photos/zestaw4/zes4.jpg');
+
+    p {
+      width: 100%;
+      font-size: 1.5em;
+      padding: 10% 0;
+      background-color: rgba(0,0,0, .2);
+      color: #ffffff;
+
+      q {
+        font-weight: 700;
+        @media (min-width: 960px) {
+          display: block;
+          padding: 0 15%;
+        }
+      }
+    }
+  }
+}
+
+#offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0 4.5em 0;
+
+  @media (min-width: 960px) {
+    height: 100vh;
+    padding: 0;
+  }
+
+  .pos {
+    width: 70%;
+  }
+
+  i {
+    font-size: 4.5em;
+    color: #900000;
+  }
+
+  p {
+    color: #3b3b3b;
+  }
+}
+
+#finish {
+  background-color: #ffffff;
+  padding: 2em 0;
+
+  @media (max-width: 960px) {
+    padding-bottom: 5em;
+  }
+
+  h4 {
+    font-size: 2em;
+    margin-bottom: 0;
+
+    @media (max-width: 960px) {
+      font-size: 1.45em;
+    }
+  }
+
+  h5 {
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+    color: #707070;
+
+    @media (max-width: 960px) {
+      font-size: 1.2em;
+    }
+  }
+
+  a.button {
+    padding: 5px 0;
+    display: block;
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    background-color: #707070;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.6em;
+    background-color: #900000;
+    cursor: pointer;
+
+    @media (max-width: 960px) {
+      width: 90%;
+    }
+  }
+
+  .production {
+    margin-top: 3em;
+
+    p {
+      margin: 0;
+      font-size: 0.8em;
+
+      &:first-of-type {
+        font-size: 1.2em;
+      }
+
+      a {
+        color: #3b3b3b;
+      }
+    }
+  }
 }
 </style>
 
 <script>
 import TopSlider from '../components/TopSlider.vue';
 import TopSliderMobile from '../components/TopSliderMobile.vue';
+import Email from '../components/Email.vue';
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue';
 
@@ -142,11 +341,44 @@ export default {
                 najwyższej jakości kawy i herbaty przysmaki dla psiaków, czy inne gadżety`,
         },
       ],
+      offerInfo: [
+        {
+          el: 1,
+          icon_name: 'icon-star',
+          par: 'Przygotowywane przeze mnie zestawy są pierwszej jakości!',
+        },
+        {
+          el: 2,
+          icon_name: 'icon-heart',
+          par: 'W każdy zestaw wkładam ogromny kawał swojego serca.',
+        },
+        {
+          el: 3,
+          icon_name: 'icon-gift',
+          par: 'W środku prezentu znajdują się pyszne kawy i herbaty oraz niezwykłe gadżety.',
+        },
+        {
+          el: 4,
+          icon_name: 'icon-credit-card',
+          par: 'Bezpieczeństwo płatności zapewnia niezawodny 1koszyk.pl',
+        },
+        {
+          el: 5,
+          icon_name: 'icon-puzzle',
+          par: 'Elementy zestawu idealnie łączą się ze sobą tworząc spójną całość.',
+        },
+        {
+          el: 6,
+          icon_name: 'icon-hourglass-2',
+          par: 'Kupując zestaw prezentowy oszczędzasz czas i pieniądze!',
+        },
+      ],
     };
   },
   components: {
     TopSlider,
     TopSliderMobile,
+    Email,
   },
 };
 </script>
