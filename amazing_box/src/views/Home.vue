@@ -1,13 +1,20 @@
 <template>
   <div class="main">
     <div class="home uk-flex uk-flex-column uk-flex-center">
-      <figure>
-        <img src="../assets/logo-mobile.svg" alt="Pudełeczko">
-        <figcaption><h1>AMAZING BOX</h1></figcaption>
+      <figure uk-scrollspy="target: > *;
+        cls: uk-animation-fade; delay: 100; repeat: true">
+        <img uk-scrollspy-class="uk-animation-slide-top"
+        src="../assets/logo-mobile.svg" alt="Pudełeczko">
+        <figcaption uk-scrollspy-class="uk-animation-slide-bottom"><h1>AMAZING BOX</h1></figcaption>
       </figure>
-      <h2>Świetny pomysł na prezent dla bliskiej Ci osoby</h2>
-      <TopSlider class="uk-visible@s"></TopSlider>
-      <TopSliderMobile class="uk-hidden@s"></TopSliderMobile>
+      <h2  uk-scrollspy="cls: uk-animation-slide-bottom; delay: 400; repeat: true">
+      Świetny pomysł na prezent dla bliskiej Ci osoby</h2>
+      <TopSlider class="uk-visible@s" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
+      repeat: true">
+      </TopSlider>
+      <TopSliderMobile class="uk-hidden@s"
+      uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
+      repeat: true"></TopSliderMobile>
     </div>
     <div id="aboutus">
     <!-- underneath desktop version -->
@@ -24,16 +31,17 @@
     </div>
     <div id="contactus">
       <div class="pos">
-        <h2 class="head">MASZ PYTANIE?</h2>
-        <Email></Email>
+        <h2 class="head" uk-scrollspy="cls: uk-animation-slide-top; delay: 200; repeat: true">
+        MASZ PYTANIE?</h2>
+        <Email uk-scrollspy="cls: uk-animation-slide-bottom; delay: 340; repeat: true"></Email>
       </div>
     </div>
-    <div id="info">
+    <div id="info" uk-scrollspy="uk-animation-fade; repeat: true;">
       <div class="uk-height-large uk-background-fixed uk-background-cover uk-light
-      uk-flex uk-flex-top" uk-scrollspy="cls: uk-animation-fade; delay: 200;
-      repeat: true;">
-        <p class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-        <q uk-scrollspy="cls: uk-animation-fade; delay: 250; repeat: true;">
+      uk-flex uk-flex-top">
+        <p uk-scrollspy="cls: uk-animation-slide-top; repeat: true; delay: 300"
+        class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+        <q>
         Moja ścieżka zawodowa zaprowadziła mnie właśnie do tego
         miejsca, w którym chcę rozwijać swoją pasję i kreatywność.
         Nic nie daje mi takiej satysfakcji jak kontakt z klientem
@@ -42,7 +50,7 @@
     </div>
     <div id="offer">
       <div class="pos uk-child-width-1-3@m" uk-grid
-      uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 100; repeat: true">
+      uk-scrollspy="cls: uk-animation-slide-top; target: .uk-card; delay: 100; repeat: true">
         <div v-for="item in offerInfo" :key="item.el">
             <div class="uk-card uk-card-default uk-card-body">
                 <i :class="item.icon_name"></i>
@@ -57,7 +65,8 @@
       <a class="button" href="#/kupuj">WEJDŹ</a>
       <div class="production">
         <p>&copy; 2021 AmazingBox.pl</p>
-        <p>Produkcja: <a href="https://eyewebcompany.pl">Eye Web Company</a></p>
+        <p>Produkcja: <a href="https://eyewebcompany.pl"
+        target="_blank">Eye Web Company</a></p>
       </div>
     </div>
   </div>
@@ -137,21 +146,6 @@ h2 {
     @media (min-width: 1366px) {
       width: 45%;
     }
-  }
-}
-
-#aboutus {
-  overflow-y: scroll;
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-
-  .item {
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
   }
 }
 
@@ -237,6 +231,7 @@ h2 {
 #finish {
   background-color: #ffffff;
   padding: 2em 0;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, .08);
 
   @media (max-width: 960px) {
     padding-bottom: 5em;
@@ -355,7 +350,7 @@ export default {
         {
           el: 3,
           icon_name: 'icon-gift',
-          par: 'W środku prezentu znajdują się pyszne kawy i herbaty oraz niezwykłe gadżety.',
+          par: 'W zestawach znajdują się pyszne kawy, herbaty i różne gadżety.',
         },
         {
           el: 4,
@@ -379,6 +374,11 @@ export default {
     TopSlider,
     TopSliderMobile,
     Email,
+  },
+  mounted() {
+    const app = document.getElementById('app');
+    app.classList.remove('shopBackground');
+    app.classList.add('mainPageBackground');
   },
 };
 </script>

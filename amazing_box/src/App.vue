@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav" class="uk-margin-auto uk-visible@m">
       <div class="centerNav uk-margin-auto uk-flex uk-flex-center uk-text-center">
-        <router-link to="/" v-scroll-to="'#aboutus'">OFERTA</router-link>
+        <router-link to="/">OFERTA</router-link>
         <router-link to="/" v-scroll-to="'#contactus'">KONTAKT</router-link>
         <router-link to="/" v-scroll-to="'#offer'">O NAS</router-link>
         <router-link class="red" to="/kupuj">SKLEP <i class="icon-basket"></i></router-link>
@@ -40,10 +40,30 @@
   text-align: center;
   color: #3B3B3B;
   background-color: #FAFAFA;
-  background-image: url('assets/background.svg');
 
-  @media (min-width: 768px) {
-    background-position: center;
+  &.shopBackground {
+    background-image: url('assets/photos/shop_box_1.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-reapat;
+
+    #nav a {
+      color: #000000;
+    }
+
+    #nav a:last-child {
+      color: #900000;
+    }
+  }
+
+  &.mainPageBackground {
+    background-image: url('assets/background – mobile.svg');
+    background-size: cover;
+
+    @media (min-width: 768px) {
+     background-image: url('assets/background.svg');
+      background-position: right;
+    }
   }
 
   .red {
@@ -52,6 +72,8 @@
 }
 
 .uk-sticky-placeholder {
+  margin: 10px 0;
+
   @media (min-width: 960px) {
      display: none;
   }
