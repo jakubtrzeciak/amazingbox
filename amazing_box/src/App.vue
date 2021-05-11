@@ -9,7 +9,8 @@
       </div>
     </div>
     <div id="navMobile" class="uk-hidden@m"  uk-sticky>
-      <router-link class="red" to="/kupuj">SKLEP <i class="icon-basket"></i></router-link>
+      <router-link class="red" to="/kupuj" v-scroll-to="'.shopFirst'">
+      SKLEP <i class="icon-basket"></i></router-link>
       <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-flip">
       &lt; MENU
       </button>
@@ -20,7 +21,8 @@
             <button class="uk-offcanvas-close" type="button" uk-close></button>
 
             <ul>
-              <li><router-link to="/" v-scroll-to="'#aboutus'">OFERTA</router-link></li>
+              <li><router-link to="/" v-scroll-to="'#aboutus'">
+              OFERTA</router-link></li>
               <li><router-link to="/" v-scroll-to="'#contactus'">KONTAKT</router-link></li>
               <li><router-link to="/" v-scroll-to="'#offer'">O NAS</router-link></li>
             </ul>
@@ -45,7 +47,9 @@
     background-image: url('assets/photos/shop_box_1.jpg');
     background-size: cover;
     background-position: top center;
-    background-repeat: no-reapat;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow-y: scroll;
 
     #nav .centerNav {
       border-color: #000000;
@@ -87,6 +91,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  z-index: 1;
 
   a, button {
     padding: 10px 30px;
