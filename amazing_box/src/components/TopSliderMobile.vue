@@ -3,7 +3,8 @@
 uk-slider="clsActivated: uk-transition-active; center: true; autoplay: true">
 
     <ul class="uk-slider-items uk-grid">
-        <li class="uk-width-3-4" v-for="item in sliderInfos" :key="item.el">
+        <a class="uk-width-3-4" v-for="item in sliderInfos" :key="item.el"
+        href="#modal-overflow" uk-toggle>
             <div class="uk-panel">
                 <img :src="require(`../assets/photos/slider_photos/${item.img}`)" :alt="item.name">
                 <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center
@@ -12,7 +13,7 @@ uk-slider="clsActivated: uk-transition-active; center: true; autoplay: true">
                     <p class="uk-margin-remove">{{item.name}}</p>
                 </div>
             </div>
-        </li>
+        </a>
     </ul>
 
     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
@@ -61,7 +62,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    li {
+    a {
         width: 250px;
         img {
             max-height: 250px;

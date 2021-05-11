@@ -47,6 +47,10 @@
     background-position: top center;
     background-repeat: no-reapat;
 
+    #nav .centerNav {
+      border-color: #000000;
+    }
+
     #nav a {
       color: #000000;
     }
@@ -72,7 +76,7 @@
 }
 
 .uk-sticky-placeholder {
-  margin: 10px 0;
+  margin: 0;
 
   @media (min-width: 960px) {
      display: none;
@@ -83,7 +87,6 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  background-color: #fafafa;
 
   a, button {
     padding: 10px 30px;

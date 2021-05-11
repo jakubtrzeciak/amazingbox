@@ -1,19 +1,22 @@
 <template>
 <div uk-slider="autoplay: true">
 
-    <div class="uk-position-relative">
+    <div class="uk-position-relative outer">
 
         <div class="uk-slider-container uk-light">
             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s
             uk-child-width-1-4@m">
-                <li v-for="item in sliderInfos" :key="item.el">
-                    <img :src="require(`../assets/photos/slider_photos/${item.img}`)" />
+                <a v-for="item in sliderInfos" :key="item.el"
+                href="#modal-overflow" uk-toggle
+                class="item"
+                :style="{'background-image':
+                'url(' + require(`../assets/photos/slider_photos/${item.img}`) + ')'}">
                     <div class="uk-position-center uk-panel">
                       <div class="info">
                         <p>Zestaw <br />{{item.name}}</p>
                       </div>
                     </div>
-                </li>
+                </a>
             </ul>
         </div>
 
@@ -30,11 +33,9 @@
             <a class="uk-position-center-right-out uk-position-small" href="#"
             uk-slidenav-next uk-slider-item="next"></a>
         </div>
-
     </div>
 
     <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-
 </div>
 </template>
 
@@ -76,7 +77,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .uk-position-relative {
+    .uk-position-relative.outer {
         width: 55%;
         margin: auto;
 
@@ -84,18 +85,28 @@ export default {
           width: 75%;
         }
 
-        li {
+        a {
             height: auto;
             box-sizing: border-box;
             padding: 10px;
+            position: relative;
 
-            img {
-                max-width: 100%;
+            &.item {
+              height: 200px;
+              box-sizing: border-box;
+              background-size: cover;
+              background-position: center;
+            }
+
+            .uk-panel {
+              height: auto;
+              opacity: 0.9;
             }
         }
 
         img {
           border-radius: 5px 5px 2px 2px;
+          max-width: 100%;
         }
 
         .info {

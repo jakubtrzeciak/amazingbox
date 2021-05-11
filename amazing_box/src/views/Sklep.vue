@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="shopFirst">
     <div class="pos">
        <figure uk-scrollspy="target: > *;
@@ -11,6 +12,7 @@
       Świetny pomysł na prezent dla bliskiej Ci osoby</h2>
     </div>
   </div>
+</div>
 </template>
 
 <script>

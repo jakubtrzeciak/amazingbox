@@ -12,12 +12,12 @@
       <TopSlider class="uk-visible@s" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
       repeat: true">
       </TopSlider>
+      <Modal></Modal>
       <TopSliderMobile class="uk-hidden@s"
       uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
       repeat: true"></TopSliderMobile>
     </div>
     <div id="aboutus">
-    <!-- underneath desktop version -->
       <div v-for="item in aboutInfo" :key="item.el" :data-name="item.name"
       class="item desktop uk-background-fixed uk-height-large uk-background-cover
       uk-overflow-hidden uk-light uk-background-blend-screen
@@ -183,7 +183,7 @@ h2 {
 #info {
   div {
     height: 100vh;
-    background-image: url('../assets/photos/zestaw4/zes4.jpg');
+    background-image: url('../assets/photos/zestaw4/z4.jpg');
 
     p {
       width: 100%;
@@ -262,7 +262,6 @@ h2 {
     width: 25%;
     margin: auto;
     text-align: center;
-    background-color: #707070;
     color: white;
     border: none;
     border-radius: 50px;
@@ -298,6 +297,7 @@ h2 {
 import TopSlider from '../components/TopSlider.vue';
 import TopSliderMobile from '../components/TopSliderMobile.vue';
 import Email from '../components/Email.vue';
+import Modal from '../components/Modal.vue';
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue';
 
@@ -374,6 +374,7 @@ export default {
     TopSlider,
     TopSliderMobile,
     Email,
+    Modal,
   },
   mounted() {
     const app = document.getElementById('app');
