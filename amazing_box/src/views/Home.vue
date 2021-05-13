@@ -12,7 +12,6 @@
       <TopSlider class="uk-visible@s" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
       repeat: true">
       </TopSlider>
-      <Modal></Modal>
       <TopSliderMobile class="uk-hidden@s"
       uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
       repeat: true"></TopSliderMobile>
@@ -297,7 +296,6 @@ h2 {
 import TopSlider from '../components/TopSlider.vue';
 import TopSliderMobile from '../components/TopSliderMobile.vue';
 import Email from '../components/Email.vue';
-import Modal from '../components/Modal.vue';
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue';
 
@@ -374,7 +372,6 @@ export default {
     TopSlider,
     TopSliderMobile,
     Email,
-    Modal,
   },
   mounted() {
     const app = document.getElementById('app');

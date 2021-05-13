@@ -14,55 +14,90 @@
   </div>
   <div id="shopArea">
     <ul class="uk-subnav uk-flex">
-      <li class="uk-active"><a href="#shopArea">Zestawy prezentowe</a></li>
-      <li><a href="#/kupuj/#shopArea">Wszystkie produkty</a></li>
+      <li :class="{'uk-active': item.active}"
+      v-for="item in types" :key="item.type_id" @click="changePreset( item )">
+      <a>{{item.name}}</a></li>
     </ul>
-
-    <div class="uk-child-width-1-5@l uk-child-width-1-4@m uk-child-width-1-2@s
-    uk-padding-large cards" uk-grid uk-scrollspy="target: > a; cls: uk-animation-fade;
-    repeat: true; delay: 40">
-        <a href="#modal-overflow" uk-toggle uk-scrollspy-class="uk-animation-slide-top">
-            <div class="uk-card uk-card-default">
-                <div class="uk-card-media-top" :style="{'background-image':
-                'url(' + require('../assets/photos/zestaw4/z4.jpg') + ')'}">
-                </div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">Zestaw 1</h3>
-                </div>
-            </div>
-        </a>
-        <a href="#modal-overflow" uk-toggle uk-scrollspy-class="uk-animation-slide-top">
-            <div class="uk-card uk-card-default">
-                <div class="uk-card-media-top" :style="{'background-image':
-                'url(' + require('../assets/photos/zestaw4/z4.jpg') + ')'}">
-                </div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">Zestaw 1</h3>
-                </div>
-            </div>
-        </a>
+    <div v-for="item in types" :key="item.type_id">
+      <div v-if="item.active" class="boxesArea uk-child-width-1-5@l uk-child-width-1-4@m
+      uk-child-width-1-2@s uk-padding-large cards" uk-grid
+      uk-scrollspy="target: > a; cls: uk-animation-fade; repeat: true; delay: 80">
+        <CardOthers v-for="el in item.boxesData" :key="el.id"
+        :cardId="el.id" :cardName="el.name" :cardImage="el.image"></CardOthers>
+      </div>
     </div>
   </div>
-  <Modal></Modal>
 </div>
 </template>
 
-<script>
-import Modal from '../components/Modal.vue';
+<script lang="javascript">
+import CardOthers from '../components/CardOthers.vue';
 
 export default {
   data() {
     return {
+      types: [
+        {
+          type_id: 0,
+          name: 'Zestawy Prezentowe',
+          active: false,
+          boxesData: [],
+          showBoxes: (ind) => {
+            console.log('boxes');
+            console.log(typeof this.types[ind].boxesData);
+          },
+        },
+        {
+          type_id: 1,
+          name: 'Wszystkie produkty',
+          active: true,
+          boxesData: [],
+          showBoxes: (ind) => {
+            this.types[ind].showBoxes = [];
+            const productsStocks = JSON.parse(this.$func.getProductsStocks());
+            const productsWindowData = JSON.parse(this.$func.getProdcuctsWindowData());
 
+            for (let i = 0; i < productsStocks.data.length; i += 1) {
+              const productData = {};
+              for (let j = 0; j < productsWindowData.data.length; j += 1) {
+                if (productsStocks.data[i].seller_id === productsWindowData.data[j].seller_id) {
+                  productData.id = productsWindowData.data[j].seller_id;
+                  productData.name = productsWindowData.data[j].name;
+                  productData.image = productsWindowData.data[j].image_thumbnail;
+                }
+              }
+              this.types[ind].boxesData.push(productData);
+            }
+            // end
+          },
+        },
+      ],
     };
   },
-  components: {
-    Modal,
+  methods: {
+    changePreset(el) {
+      for (let a = 0; a < this.types.length; a += 1) {
+        if (this.types[a].name !== el.name) this.types[a].active = false;
+        else {
+          this.types[a].active = true;
+          this.types[a].showBoxes(a);
+        }
+      }
+    },
   },
   mounted() {
     const app = document.getElementById('app');
     app.classList.remove('mainPageBackground');
     app.classList.add('shopBackground');
+
+    for (let a = 0; a < this.types.length; a += 1) {
+      if (this.types[a].active) {
+        this.types[a].showBoxes(a);
+      }
+    }
+  },
+  components: {
+    CardOthers,
   },
 };
 </script>
@@ -127,6 +162,8 @@ h2 {
   width: 100%;
   position: relative;
   background-color: #fafafa;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+  min-height: 80vh;
 
   ul {
     width: 100%;
@@ -161,14 +198,8 @@ h2 {
     }
   }
 
-  .uk-card-media-top {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
+  .uk-card-body {
+    height: auto;
   }
-}
-
-.uk-card-body {
-  padding: 20px 10px;
 }
 </style>

@@ -54,6 +54,20 @@
 <script>
 export default {
   name: 'Modal',
+  props: {
+    productName: String,
+    imagePaths: Array,
+    description: String,
+    price: String,
+    productURL: String,
+  },
+  mounted() {
+    console.log(this.productName);
+    console.log(this.imagePaths);
+    console.log(this.description);
+    console.log(this.price);
+    console.log(this.productURL);
+  },
 };
 </script>
 

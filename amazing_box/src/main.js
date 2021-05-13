@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import vueDebounce from 'vue-debounce';
 import VueScrollTo from 'vue-scrollto';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+import { func } from '../public/func';
 import App from './App.vue';
 import router from './router';
 
@@ -9,6 +12,9 @@ Vue.use(VueScrollTo);
 Vue.use(vueDebounce, {
   listenTo: 'input',
 });
+Vue.use(VueAxios, axios);
+
+Vue.prototype.$func = func;
 
 new Vue({
   router,
