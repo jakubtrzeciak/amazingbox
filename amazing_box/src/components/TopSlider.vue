@@ -6,14 +6,14 @@
         <div class="uk-slider-container uk-light">
             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s
             uk-child-width-1-4@m">
-                <a v-for="item in sliderInfos" :key="item.el"
+                <a v-for="item in boxesData" :key="item.id"
                 href="#modal-overflow" uk-toggle
                 class="item"
                 :style="{'background-image':
-                'url(' + require(`../assets/photos/slider_photos/${item.img}`) + ')'}">
+                'url(' + `${item.image}` + ')'}">
                     <div class="uk-position-center uk-panel">
                       <div class="info">
-                        <p>Zestaw <br />{{item.name}}</p>
+                        <p>{{item.name}}</p>
                       </div>
                     </div>
                 </a>
@@ -40,38 +40,42 @@
 </template>
 
 <script>
+/* eslint-disable prefer-destructuring */
 export default {
   data() {
     return {
       name: 'TopSlider',
-      sliderInfos: [
-        {
-          el: 1,
-          name: 'Słodki odpoczynek',
-          img: 'z1.jpg',
-        },
-        {
-          el: 2,
-          name: 'Kojąca słodycz',
-          img: 'z2.jpg',
-        },
-        {
-          el: 3,
-          name: 'Męski kącik',
-          img: 'z3.jpg',
-        },
-        {
-          el: 4,
-          name: 'Chwila spokoju',
-          img: 'z4.jpg',
-        },
-        {
-          el: 5,
-          name: 'Zdrowy Pupil',
-          img: 'z5.jpg',
-        },
-      ],
+      boxesData: [],
+      photo: '',
+      listLength: 0,
     };
+  },
+  methods: {
+    showBoxes() {
+      this.boxesData = [];
+      const productsStocks = JSON.parse(this.$func.getProductsStocks());
+      console.log(productsStocks);
+      const productsWindowData = JSON.parse(this.$func.getProdcuctsWindowData());
+      console.log(productsWindowData);
+      this.listLenght = productsStocks.data.length;
+      if (productsStocks.data.length > 6) this.listLenght = 6;
+      for (let i = 0; i < this.listLenght; i += 1) {
+        const productData = {};
+        for (let j = 0; j < productsWindowData.data.length; j += 1) {
+          if (productsStocks.data[i].seller_id === productsWindowData.data[j].seller_id) {
+            productData.id = productsWindowData.data[j].seller_id;
+            productData.name = productsWindowData.data[j].name;
+            productData.image = productsWindowData.data[j].image_thumbnail;
+          }
+        }
+        this.boxesData.push(productData);
+        console.log(this.photo);
+      }
+      // end
+    },
+  },
+  mounted() {
+    this.showBoxes();
   },
 };
 </script>
@@ -112,5 +116,10 @@ export default {
         .info {
           font-size: 1.15em;
         }
+    }
+
+    uk-slider-container a {
+      box-sizing: border-box;
+      padding-left: 10px;
     }
 </style>

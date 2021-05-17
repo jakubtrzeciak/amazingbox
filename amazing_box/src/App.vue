@@ -31,8 +31,6 @@
       </div>
     </div>
     <router-view/>
-    <Modal productName="Empty" description="Empty" :imagePaths="['a','b','c']"
-    price="99 zł" productURL="Empty"></Modal>
   </div>
 </template>
 
@@ -139,11 +137,8 @@
 </style>
 
 <script>
-import Modal from './components/Modal.vue';
+/* eslint-disable func-names */
 
 export default {
-  components: {
-    Modal,
-  },
 };
 </script>

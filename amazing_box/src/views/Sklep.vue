@@ -18,24 +18,40 @@
       v-for="item in types" :key="item.type_id" @click="changePreset( item )">
       <a>{{item.name}}</a></li>
     </ul>
-    <div v-for="item in types" :key="item.type_id">
-      <div v-if="item.active" class="boxesArea uk-child-width-1-5@l uk-child-width-1-4@m
+    <div v-for="item in types" :key="item.type_id"
+    uk-scrollspy="cls: uk-animation-fade; repeat: true; delay: 550">
+      <div v-if="item.active"
+      class="boxesArea uk-child-width-1-5@l uk-child-width-1-4@m
       uk-child-width-1-2@s uk-padding-large cards" uk-grid
       uk-scrollspy="target: > a; cls: uk-animation-fade; repeat: true; delay: 80">
         <CardOthers v-for="el in item.boxesData" :key="el.id"
-        :cardId="el.id" :cardName="el.name" :cardImage="el.image"></CardOthers>
+        :cardId="el.id" :cardName="el.name" :cardImage="el.image"
+        @clicked="updateStorage"></CardOthers>
       </div>
     </div>
+     <div id="modal-overflow" uk-modal>
+        <Modal v-for="item in modalData" :key="item.id"
+        :isActive="item.isActive"
+        :desc="item.desc"
+        :images="item.images"
+        :name="item.name"
+        :uri="item.uri"
+        :price="item.price"></Modal>
+      </div>
   </div>
 </div>
 </template>
 
 <script lang="javascript">
+/* eslint-disable prefer-destructuring */
 import CardOthers from '../components/CardOthers.vue';
+import Modal from '../components/Modal.vue';
 
 export default {
   data() {
     return {
+      modalData: [],
+      photo: '',
       types: [
         {
           type_id: 0,
@@ -43,8 +59,58 @@ export default {
           active: false,
           boxesData: [],
           showBoxes: (ind) => {
-            console.log('boxes');
-            console.log(typeof this.types[ind].boxesData);
+            this.types[ind].boxesData = [];
+            const sheetsData = JSON.parse(this.$func.getSheetsData()).data.feed.entry;
+            console.log(sheetsData);
+            const productsStocks = JSON.parse(this.$func.getProductsStocks());
+            console.log(productsStocks);
+            const productsWindowData = JSON.parse(this.$func.getProdcuctsWindowData());
+            console.log(productsWindowData);
+
+            for (let i = 0; i < productsStocks.data.length; i += 1) {
+              this.photo = '';
+              let row = '';
+              const imagesTable = [];
+              let description = '';
+              let imageCounter = 2;
+              for (let k = 0; k < sheetsData.length; k += 1) {
+                if (sheetsData[k].gs$cell.inputValue === productsStocks.data[i].seller_id) {
+                  row = sheetsData[k].gs$cell.row;
+                }
+                if (sheetsData[k].gs$cell.col === '2' && sheetsData[k].gs$cell.row === row) {
+                  this.photo = sheetsData[k].gs$cell.inputValue.split('/')[5];
+                }
+
+                if (sheetsData[k].gs$cell.row === row
+                && sheetsData[k].gs$cell.col === imageCounter.toString()) {
+                  const ImagesData = {};
+                  ImagesData.value = sheetsData[k].gs$cell.inputValue.split('/')[5];
+                  ImagesData.el = imageCounter;
+                  imagesTable.push(ImagesData);
+                  imageCounter += 1;
+                }
+
+                if (sheetsData[k].gs$cell.col === '7' && sheetsData[k].gs$cell.row === row) {
+                  description = sheetsData[k].gs$cell.inputValue;
+                }
+              }
+              const productData = {};
+              for (let j = 0; j < productsWindowData.data.length; j += 1) {
+                if (productsStocks.data[i].seller_id === productsWindowData.data[j].seller_id
+                && productsWindowData.data[i].name.split(' ')[0] === 'Zestaw') {
+                  productData.id = productsWindowData.data[j].seller_id;
+                  productData.name = productsWindowData.data[j].name;
+                  productData.uri = productsWindowData.data[j].short_code_uri;
+                  productData.price = productsWindowData.data[j].price.formatted;
+                  productData.image = this.photo;
+                  productData.images = imagesTable;
+                  productData.desc = description;
+                  productData.isActive = false;
+                  this.types[ind].boxesData.push(productData);
+                }
+              }
+            }
+            localStorage.setItem('modal-data', JSON.stringify(this.types[ind].boxesData));
           },
         },
         {
@@ -53,21 +119,57 @@ export default {
           active: true,
           boxesData: [],
           showBoxes: (ind) => {
-            this.types[ind].showBoxes = [];
+            this.types[ind].boxesData = [];
+            const sheetsData = JSON.parse(this.$func.getSheetsData()).data.feed.entry;
+            console.log(sheetsData);
             const productsStocks = JSON.parse(this.$func.getProductsStocks());
+            console.log(productsStocks);
             const productsWindowData = JSON.parse(this.$func.getProdcuctsWindowData());
-
+            console.log(productsWindowData);
             for (let i = 0; i < productsStocks.data.length; i += 1) {
+              this.photo = '';
+              let row = '';
+              const imagesTable = [];
+              let description = '';
+              let imageCounter = 2;
+              for (let k = 0; k < sheetsData.length; k += 1) {
+                if (sheetsData[k].gs$cell.inputValue === productsStocks.data[i].seller_id) {
+                  row = sheetsData[k].gs$cell.row;
+                }
+                if (sheetsData[k].gs$cell.col === '2' && sheetsData[k].gs$cell.row === row) {
+                  this.photo = sheetsData[k].gs$cell.inputValue.split('/')[5];
+                }
+
+                if (sheetsData[k].gs$cell.row === row
+                && sheetsData[k].gs$cell.col === imageCounter.toString()) {
+                  const ImagesData = {};
+                  ImagesData.value = sheetsData[k].gs$cell.inputValue.split('/')[5];
+                  ImagesData.el = imageCounter;
+                  imagesTable.push(ImagesData);
+                  imageCounter += 1;
+                }
+
+                if (sheetsData[k].gs$cell.col === '7' && sheetsData[k].gs$cell.row === row) {
+                  description = sheetsData[k].gs$cell.inputValue;
+                }
+              }
               const productData = {};
               for (let j = 0; j < productsWindowData.data.length; j += 1) {
                 if (productsStocks.data[i].seller_id === productsWindowData.data[j].seller_id) {
                   productData.id = productsWindowData.data[j].seller_id;
                   productData.name = productsWindowData.data[j].name;
-                  productData.image = productsWindowData.data[j].image_thumbnail;
+                  productData.uri = productsWindowData.data[j].short_code_uri;
+                  productData.price = productsWindowData.data[j].price.formatted;
+                  productData.image = this.photo;
+                  productData.images = imagesTable;
+                  productData.desc = description;
+                  productData.isActive = false;
                 }
               }
               this.types[ind].boxesData.push(productData);
+              console.log(this.types[ind].boxesData);
             }
+            localStorage.setItem('modal-data', JSON.stringify(this.types[ind].boxesData));
             // end
           },
         },
@@ -84,6 +186,11 @@ export default {
         }
       }
     },
+    async updateStorage(value) {
+      this.modalData = value;
+      await localStorage.setItem('modal-data', JSON.stringify(value));
+      console.log(value);
+    },
   },
   mounted() {
     const app = document.getElementById('app');
@@ -98,6 +205,7 @@ export default {
   },
   components: {
     CardOthers,
+    Modal,
   },
 };
 </script>
@@ -163,7 +271,6 @@ h2 {
   position: relative;
   background-color: #fafafa;
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
-  min-height: 80vh;
 
   ul {
     width: 100%;
@@ -173,11 +280,12 @@ h2 {
     position: sticky;
     top: 0;
     z-index: 3;
+    background-color: #ffffff;
+    box-shadow: 0 2px 7px rgba(82, 82, 82, 0.2);
 
-     @media (max-width: 700px) {
-       padding: 10px 0;
-        background-color: #ffffff;
-      }
+    @media (max-width: 700px) {
+      padding: 10px 0;
+    }
 
     li {
       padding: 15px 30px;
@@ -196,10 +304,6 @@ h2 {
         }
       }
     }
-  }
-
-  .uk-card-body {
-    height: auto;
   }
 }
 </style>

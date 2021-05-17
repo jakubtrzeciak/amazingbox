@@ -31,4 +31,12 @@ export const func = {
       });
     return localStorage.getItem('stocks');
   },
+
+  getSheetsData: () => {
+    axios.get('https://spreadsheets.google.com/feeds/cells/1sZCYphAXYbdaC7R8o2KLQe9acLxqO9vJAkLznfhCd8U/1/public/full?alt=json')
+      .then((resp1) => {
+        localStorage.setItem('sheets', JSON.stringify(resp1));
+      });
+    return localStorage.getItem('sheets');
+  },
 };

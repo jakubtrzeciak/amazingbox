@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "request": "^2.79.0",
     "uikit": "^3.6.20",
     "v-scroll-to": "^1.0.0",
     "vue": "^2.6.11",

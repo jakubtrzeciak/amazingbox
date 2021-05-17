@@ -3,13 +3,14 @@
 uk-slider="clsActivated: uk-transition-active; center: true; autoplay: true">
 
     <ul class="uk-slider-items uk-grid">
-        <a class="uk-width-3-4" v-for="item in sliderInfos" :key="item.el"
+        <a class="uk-width-3-4" v-for="item in boxesData" :key="item.id"
         href="#modal-overflow" uk-toggle>
-            <div class="uk-panel">
-                <img :src="require(`../assets/photos/slider_photos/${item.img}`)" :alt="item.name">
+            <div class="uk-panel"
+            :style="{'background-image':
+                'url(' + `${item.image}` + ')'}">
+                <img :src="`${item.image}`" :alt="item.name">
                 <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center
                 uk-transition-slide-bottom">
-                    <h3 class="uk-margin-remove">Zestaw</h3>
                     <p class="uk-margin-remove">{{item.name}}</p>
                 </div>
             </div>
@@ -29,6 +30,9 @@ export default {
   data() {
     return {
       name: 'TopSliderMobile',
+      boxesData: [],
+      photo: '',
+      listLength: 0,
       sliderInfos: [
         {
           el: 1,
@@ -58,15 +62,53 @@ export default {
       ],
     };
   },
+  methods: {
+    showBoxes() {
+      this.boxesData = [];
+      const productsStocks = JSON.parse(this.$func.getProductsStocks());
+      console.log(productsStocks);
+      const productsWindowData = JSON.parse(this.$func.getProdcuctsWindowData());
+      console.log(productsWindowData);
+      this.listLenght = productsStocks.data.length;
+      if (productsStocks.data.length > 6) this.listLenght = 6;
+      for (let i = 0; i < this.listLenght; i += 1) {
+        const productData = {};
+        for (let j = 0; j < productsWindowData.data.length; j += 1) {
+          if (productsStocks.data[i].seller_id === productsWindowData.data[j].seller_id) {
+            productData.id = productsWindowData.data[j].seller_id;
+            productData.name = productsWindowData.data[j].name;
+            productData.image = productsWindowData.data[j].image_thumbnail;
+          }
+        }
+        this.boxesData.push(productData);
+        console.log(this.photo);
+      }
+      // end
+    },
+  },
+  mounted() {
+    this.showBoxes();
+  },
 };
 </script>
 
 <style lang="scss" scoped>
     a {
-        width: 250px;
-        img {
-            max-height: 250px;
-            width: 100%;
+      .uk-panel {
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+
+         img {
+            visibility: hidden;
+            max-width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto
         }
+      }
     }
 </style>

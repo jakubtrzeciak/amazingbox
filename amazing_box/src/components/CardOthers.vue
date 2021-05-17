@@ -1,9 +1,9 @@
 <template>
 <a :id="cardId" href="#modal-overflow" uk-toggle v-scroll-to="'#shopArea'"
-    uk-scrollspy-class="uk-animation-fade">
+    uk-scrollspy-class="uk-animation-fade" @click="openModal()">
     <div class="uk-card uk-card-default">
         <div class="uk-card-media-top" :style="{'background-image':
-        `url(${cardImage})`}">
+                'url(' + `https://drive.google.com/uc?id=${cardImage}&export=download` + ')'}">
         </div>
         <div class="uk-card-body">
             <h3 class="uk-card-title">{{ cardName }}</h3>
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+/* eslint-disable func-names */
 export default {
   name: 'CardOthers',
   props: {
@@ -20,16 +21,26 @@ export default {
     cardId: String,
     cardImage: String,
   },
+  methods: {
+    openModal() {
+      const activeItem = this.cardId;
+      const modalData = JSON.parse(localStorage.getItem('modal-data'));
+      for (let i = 0; i < modalData.length; i += 1) {
+        if (modalData[i].id === activeItem) {
+          modalData[i].isActive = true;
+          console.log(modalData[i].id);
+        } else {
+          modalData[i].isActive = false;
+        }
+      }
+
+      this.$emit('clicked', modalData);
+    },
+  },
 };
 </script>
 
-<style lang="scss">
-.uk-padding-large {
-  @media (min-width: 1200px) {
-     padding-top: 10px;
-  }
-}
-
+<style lang="scss" scoped>
 .uk-card-media-top {
   height: 240px;
   background-size: cover;

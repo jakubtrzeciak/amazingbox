@@ -1,30 +1,18 @@
 <template>
-<div id="modal-overflow" uk-modal>
-    <div class="uk-modal-dialog">
-
+    <div class="uk-modal-dialog" v-if="isActive">
         <button class="uk-modal-close-default" type="button" uk-close></button>
 
         <div class="uk-modal-header">
-            <h2 class="uk-modal-title">Headline</h2>
+            <h2 class="uk-modal-title">{{ name }}</h2>
         </div>
 
         <div class="uk-modal-body" uk-overflow-auto>
-           <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
-           uk-slideshow>
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
+        uk-slideshow>
                 <ul class="uk-slideshow-items">
-                    <li>
+                    <li v-for="image in images" :key="image.el">
                         <div uk-cover class="uk-panel" :style="{'background-image':
-                        'url(' + require('../assets/photos/zestaw4/z4.jpg') + ')'}">
-                        </div>
-                    </li>
-                    <li>
-                        <div uk-cover class="uk-panel" :style="{'background-image':
-                        'url(' + require('../assets/photos/zestaw4/z4_1.jpg') + ')'}">
-                        </div>
-                    </li>
-                    <li>
-                        <div uk-cover class="uk-panel" :style="{'background-image':
-                        'url(' + require('../assets/photos/zestaw4/z4_2.jpg') + ')'}">
+                'url(' + `https://drive.google.com/uc?id=${image.value}&export=download` + ')'}">
                         </div>
                     </li>
                 </ul>
@@ -35,38 +23,25 @@
                 uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
 
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p>{{ desc }}</p>
         </div>
 
         <div class="uk-modal-footer uk-text-right">
-            <a href="#" type="button" class="button">DODAJ DO KOSZYKA</a>
+            <a :href="uri" type="button" class="button">Dodaj do koszyka ({{price}})</a>
         </div>
-
     </div>
-</div>
 </template>
 
 <script>
 export default {
   name: 'Modal',
   props: {
-    productName: String,
-    imagePaths: Array,
-    description: String,
+    name: String,
+    images: Array,
+    desc: String,
+    uri: String,
     price: String,
-    productURL: String,
-  },
-  mounted() {
-    console.log(this.productName);
-    console.log(this.imagePaths);
-    console.log(this.description);
-    console.log(this.price);
-    console.log(this.productURL);
+    isActive: Boolean,
   },
 };
 </script>

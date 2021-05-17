@@ -15,6 +15,7 @@ Vue.use(vueDebounce, {
 Vue.use(VueAxios, axios);
 
 Vue.prototype.$func = func;
+Vue.prototype.$modal = '';
 
 new Vue({
   router,
