@@ -29,15 +29,6 @@
         @clicked="updateStorage"></CardOthers>
       </div>
     </div>
-     <div id="modal-overflow" uk-modal>
-        <Modal v-for="item in modalData" :key="item.id"
-        :isActive="item.isActive"
-        :desc="item.desc"
-        :images="item.images"
-        :name="item.name"
-        :uri="item.uri"
-        :price="item.price"></Modal>
-      </div>
   </div>
 </div>
 </template>
@@ -45,7 +36,6 @@
 <script lang="javascript">
 /* eslint-disable prefer-destructuring */
 import CardOthers from '../components/CardOthers.vue';
-import Modal from '../components/Modal.vue';
 
 export default {
   data() {
@@ -57,6 +47,7 @@ export default {
           type_id: 0,
           name: 'Zestawy Prezentowe',
           active: false,
+          sheetsData: '',
           boxesData: [],
           showBoxes: (ind) => {
             this.types[ind].boxesData = [];
@@ -120,8 +111,7 @@ export default {
           boxesData: [],
           showBoxes: (ind) => {
             this.types[ind].boxesData = [];
-            const sheetsData = JSON.parse(this.$func.getSheetsData()).data.feed.entry;
-            console.log(sheetsData);
+            console.log(this.sheetsData);
             const productsStocks = JSON.parse(this.$func.getProductsStocks());
             console.log(productsStocks);
             const productsWindowData = JSON.parse(this.$func.getProdcuctsWindowData());
@@ -132,25 +122,25 @@ export default {
               const imagesTable = [];
               let description = '';
               let imageCounter = 2;
-              for (let k = 0; k < sheetsData.length; k += 1) {
-                if (sheetsData[k].gs$cell.inputValue === productsStocks.data[i].seller_id) {
-                  row = sheetsData[k].gs$cell.row;
+              for (let k = 0; k < this.sheetsData.length; k += 1) {
+                if (this.sheetsData[k].gs$cell.inputValue === productsStocks.data[i].seller_id) {
+                  row = this.sheetsData[k].gs$cell.row;
                 }
-                if (sheetsData[k].gs$cell.col === '2' && sheetsData[k].gs$cell.row === row) {
-                  this.photo = sheetsData[k].gs$cell.inputValue.split('/')[5];
+                if (this.sheetsData[k].gs$cell.col === '2' && this.sheetsData[k].gs$cell.row === row) {
+                  this.photo = this.sheetsData[k].gs$cell.inputValue.split('/')[5];
                 }
 
-                if (sheetsData[k].gs$cell.row === row
-                && sheetsData[k].gs$cell.col === imageCounter.toString()) {
+                if (this.sheetsData[k].gs$cell.row === row
+                && this.sheetsData[k].gs$cell.col === imageCounter.toString()) {
                   const ImagesData = {};
-                  ImagesData.value = sheetsData[k].gs$cell.inputValue.split('/')[5];
+                  ImagesData.value = this.sheetsData[k].gs$cell.inputValue.split('/')[5];
                   ImagesData.el = imageCounter;
                   imagesTable.push(ImagesData);
                   imageCounter += 1;
                 }
 
-                if (sheetsData[k].gs$cell.col === '7' && sheetsData[k].gs$cell.row === row) {
-                  description = sheetsData[k].gs$cell.inputValue;
+                if (this.sheetsData[k].gs$cell.col === '7' && this.sheetsData[k].gs$cell.row === row) {
+                  description = this.sheetsData[k].gs$cell.inputValue;
                 }
               }
               const productData = {};
@@ -186,13 +176,14 @@ export default {
         }
       }
     },
-    async updateStorage(value) {
+    updateStorage(value) {
+      localStorage.setItem('modal-data', JSON.stringify(value));
       this.modalData = value;
-      await localStorage.setItem('modal-data', JSON.stringify(value));
-      console.log(value);
+      this.$modalActive = true;
     },
   },
   mounted() {
+    this.sheetsData = JSON.parse(this.$func.getSheetsData()).data.feed.entry;
     const app = document.getElementById('app');
     app.classList.remove('mainPageBackground');
     app.classList.add('shopBackground');
@@ -205,7 +196,6 @@ export default {
   },
   components: {
     CardOthers,
-    Modal,
   },
 };
 </script>

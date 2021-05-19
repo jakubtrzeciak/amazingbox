@@ -9,6 +9,7 @@
                 <a v-for="item in boxesData" :key="item.id"
                 href="#modal-overflow" uk-toggle
                 class="item"
+                @click="updateStorage(item.id)"
                 :style="{'background-image':
                 'url(' + `${item.image}` + ')'}">
                     <div class="uk-position-center uk-panel">
@@ -53,6 +54,8 @@ export default {
   methods: {
     showBoxes() {
       this.boxesData = [];
+      const sheetsData = JSON.parse(this.$func.getSheetsData()).data.feed.entry;
+      console.log(sheetsData);
       const productsStocks = JSON.parse(this.$func.getProductsStocks());
       console.log(productsStocks);
       const productsWindowData = JSON.parse(this.$func.getProdcuctsWindowData());
@@ -60,18 +63,61 @@ export default {
       this.listLenght = productsStocks.data.length;
       if (productsStocks.data.length > 6) this.listLenght = 6;
       for (let i = 0; i < this.listLenght; i += 1) {
+        this.photo = '';
+        let row = '';
+        const imagesTable = [];
+        let description = '';
+        let imageCounter = 2;
+        for (let k = 0; k < sheetsData.length; k += 1) {
+          if (sheetsData[k].gs$cell.inputValue === productsStocks.data[i].seller_id) {
+            row = sheetsData[k].gs$cell.row;
+          }
+
+          if (sheetsData[k].gs$cell.row === row
+          && sheetsData[k].gs$cell.col === imageCounter.toString()) {
+            const ImagesData = {};
+            ImagesData.value = sheetsData[k].gs$cell.inputValue.split('/')[5];
+            ImagesData.el = imageCounter;
+            imagesTable.push(ImagesData);
+            imageCounter += 1;
+          }
+
+          if (sheetsData[k].gs$cell.col === '7' && sheetsData[k].gs$cell.row === row) {
+            description = sheetsData[k].gs$cell.inputValue;
+          }
+        }
         const productData = {};
         for (let j = 0; j < productsWindowData.data.length; j += 1) {
           if (productsStocks.data[i].seller_id === productsWindowData.data[j].seller_id) {
             productData.id = productsWindowData.data[j].seller_id;
             productData.name = productsWindowData.data[j].name;
+            productData.uri = productsWindowData.data[j].short_code_uri;
+            productData.price = productsWindowData.data[j].price.formatted;
             productData.image = productsWindowData.data[j].image_thumbnail;
+            productData.images = imagesTable;
+            productData.desc = description;
+            productData.isActive = false;
           }
         }
         this.boxesData.push(productData);
-        console.log(this.photo);
+        console.log(this.boxesData);
+        localStorage.setItem('modal-data', JSON.stringify(this.boxesData));
       }
       // end
+    },
+    updateStorage(value) {
+      const activeItem = value;
+      const modalData = JSON.parse(localStorage.getItem('modal-data'));
+      for (let i = 0; i < modalData.length; i += 1) {
+        if (modalData[i].id === activeItem) {
+          modalData[i].isActive = true;
+          console.log(modalData[i].id);
+        } else {
+          modalData[i].isActive = false;
+        }
+      }
+
+      this.$emit('clicked', modalData);
     },
   },
   mounted() {

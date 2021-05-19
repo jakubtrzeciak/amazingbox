@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+
 import Vue from 'vue';
 import vueDebounce from 'vue-debounce';
 import VueScrollTo from 'vue-scrollto';
@@ -15,7 +17,7 @@ Vue.use(vueDebounce, {
 Vue.use(VueAxios, axios);
 
 Vue.prototype.$func = func;
-Vue.prototype.$modal = '';
+Vue.prototype.$modalActive = false;
 
 new Vue({
   router,

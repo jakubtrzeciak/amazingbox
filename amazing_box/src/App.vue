@@ -31,8 +31,45 @@
       </div>
     </div>
     <router-view/>
+    <div id="modal-overflow" uk-modal>
+       <Modal v-for="item in modalData" :key="item.id"
+        :isActive="item.isActive"
+        :desc="item.desc"
+        :images="item.images"
+        :name="item.name"
+        :uri="item.uri"
+        :price="item.price"></Modal>
+    </div>
   </div>
 </template>
+
+<script>
+/* eslint-disable func-names */
+import Modal from './components/Modal.vue';
+
+export default {
+  data() {
+    return {
+      modalData: [],
+    };
+  },
+  methods: {
+    updateData() {
+      this.modalData = JSON.parse(localStorage.getItem('modal-data'));
+    },
+  },
+  mounted() {
+    document.body.addEventListener('click', this.updateData);
+    console.log(this.modalData);
+  },
+  updated() {
+    console.log(this.modalData);
+  },
+  components: {
+    Modal,
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -135,10 +172,3 @@
   }
 }
 </style>
-
-<script>
-/* eslint-disable func-names */
-
-export default {
-};
-</script>

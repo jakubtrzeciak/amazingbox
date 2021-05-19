@@ -10,7 +10,7 @@
       <h2  uk-scrollspy="cls: uk-animation-slide-bottom; delay: 400; repeat: true">
       Świetny pomysł na prezent dla bliskiej Ci osoby</h2>
       <TopSlider class="uk-visible@s" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
-      repeat: true">
+      repeat: true" @clicked="updateStorage">
       </TopSlider>
       <TopSliderMobile class="uk-hidden@s"
       uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
@@ -70,6 +70,103 @@
     </div>
   </div>
 </template>
+
+<script>
+import TopSlider from '../components/TopSlider.vue';
+import TopSliderMobile from '../components/TopSliderMobile.vue';
+import Email from '../components/Email.vue';
+// @ is an alias to /src
+// import HelloWorld from '@/components/HelloWorld.vue';
+
+export default {
+  data() {
+    return {
+      modalData: [],
+      aboutInfo: [
+        {
+          el: 1,
+          id: 'ph1',
+          name: 'Zestaw nr 2',
+          h3: 'Witaj, jak mogę Ci pomóc?',
+          par: `Mam na imię Aga i zapraszam Cię do
+                mojego kolorowego świata prezentowych
+                boxów małej manufaktury, projektowanych
+                od serca, ciekawych i twórczych przedmiotów.`,
+        },
+        {
+          el: 2,
+          id: 'ph2',
+          name: 'Zestaw nr 3',
+          h3: 'Jak działam?',
+          par: `Do każdej realizacji podchodzę indywidualnie,
+                klient ma możliwość wyboru każdego z
+                poszczególnych elementów prezentu,
+                spersonalizowania go lub skorzystania
+                z gotowych już rozwiązań.`,
+        },
+        {
+          el: 3,
+          id: 'ph3',
+          name: 'Zestaw nr 6',
+          h3: 'Co oferuję?',
+          par: `Na asortyment naszego sklepu składa się
+                szeroka gama produktów prezentowych takich jak naturalne świece,
+                najwyższej jakości kawy i herbaty przysmaki dla psiaków, czy inne gadżety`,
+        },
+      ],
+      offerInfo: [
+        {
+          el: 1,
+          icon_name: 'icon-star',
+          par: 'Przygotowywane przeze mnie zestawy są pierwszej jakości!',
+        },
+        {
+          el: 2,
+          icon_name: 'icon-heart',
+          par: 'W każdy zestaw wkładam ogromny kawał swojego serca.',
+        },
+        {
+          el: 3,
+          icon_name: 'icon-gift',
+          par: 'W zestawach znajdują się pyszne kawy, herbaty i różne gadżety.',
+        },
+        {
+          el: 4,
+          icon_name: 'icon-credit-card',
+          par: 'Bezpieczeństwo płatności zapewnia niezawodny 1koszyk.pl',
+        },
+        {
+          el: 5,
+          icon_name: 'icon-puzzle',
+          par: 'Elementy zestawu idealnie łączą się ze sobą tworząc spójną całość.',
+        },
+        {
+          el: 6,
+          icon_name: 'icon-hourglass-2',
+          par: 'Kupując zestaw prezentowy oszczędzasz czas i pieniądze!',
+        },
+      ],
+    };
+  },
+  methods: {
+    updateStorage(value) {
+      this.modalData = value;
+      localStorage.setItem('modal-data', JSON.stringify(this.modalData));
+      this.$modal = this.modalData;
+    },
+  },
+  components: {
+    TopSlider,
+    TopSliderMobile,
+    Email,
+  },
+  mounted() {
+    const app = document.getElementById('app');
+    app.classList.remove('shopBackground');
+    app.classList.add('mainPageBackground');
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .home {
@@ -291,92 +388,3 @@ h2 {
   }
 }
 </style>
-
-<script>
-import TopSlider from '../components/TopSlider.vue';
-import TopSliderMobile from '../components/TopSliderMobile.vue';
-import Email from '../components/Email.vue';
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue';
-
-export default {
-  data() {
-    return {
-      aboutInfo: [
-        {
-          el: 1,
-          id: 'ph1',
-          name: 'Zestaw nr 2',
-          h3: 'Witaj, jak mogę Ci pomóc?',
-          par: `Mam na imię Aga i zapraszam Cię do
-                mojego kolorowego świata prezentowych
-                boxów małej manufaktury, projektowanych
-                od serca, ciekawych i twórczych przedmiotów.`,
-        },
-        {
-          el: 2,
-          id: 'ph2',
-          name: 'Zestaw nr 3',
-          h3: 'Jak działam?',
-          par: `Do każdej realizacji podchodzę indywidualnie,
-                klient ma możliwość wyboru każdego z
-                poszczególnych elementów prezentu,
-                spersonalizowania go lub skorzystania
-                z gotowych już rozwiązań.`,
-        },
-        {
-          el: 3,
-          id: 'ph3',
-          name: 'Zestaw nr 6',
-          h3: 'Co oferuję?',
-          par: `Na asortyment naszego sklepu składa się
-                szeroka gama produktów prezentowych takich jak naturalne świece,
-                najwyższej jakości kawy i herbaty przysmaki dla psiaków, czy inne gadżety`,
-        },
-      ],
-      offerInfo: [
-        {
-          el: 1,
-          icon_name: 'icon-star',
-          par: 'Przygotowywane przeze mnie zestawy są pierwszej jakości!',
-        },
-        {
-          el: 2,
-          icon_name: 'icon-heart',
-          par: 'W każdy zestaw wkładam ogromny kawał swojego serca.',
-        },
-        {
-          el: 3,
-          icon_name: 'icon-gift',
-          par: 'W zestawach znajdują się pyszne kawy, herbaty i różne gadżety.',
-        },
-        {
-          el: 4,
-          icon_name: 'icon-credit-card',
-          par: 'Bezpieczeństwo płatności zapewnia niezawodny 1koszyk.pl',
-        },
-        {
-          el: 5,
-          icon_name: 'icon-puzzle',
-          par: 'Elementy zestawu idealnie łączą się ze sobą tworząc spójną całość.',
-        },
-        {
-          el: 6,
-          icon_name: 'icon-hourglass-2',
-          par: 'Kupując zestaw prezentowy oszczędzasz czas i pieniądze!',
-        },
-      ],
-    };
-  },
-  components: {
-    TopSlider,
-    TopSliderMobile,
-    Email,
-  },
-  mounted() {
-    const app = document.getElementById('app');
-    app.classList.remove('shopBackground');
-    app.classList.add('mainPageBackground');
-  },
-};
-</script>
