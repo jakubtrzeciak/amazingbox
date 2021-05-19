@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+/* eslint-disable object-shorthand */
 import axios from 'axios';
 
 export const func = {
@@ -38,5 +39,19 @@ export const func = {
         localStorage.setItem('sheets', JSON.stringify(resp1));
       });
     return localStorage.getItem('sheets');
+  },
+
+  sendMail: (name, email, message) => {
+    axios.post('http://localhost:80/amazingbox/connect/connect.php', JSON.stringify({
+      name: name,
+      email: email,
+      message: message,
+    }))
+      .then((resp1) => {
+        localStorage.setItem('response', JSON.stringify(resp1));
+      })
+      .catch((error) => {
+        localStorage.setItem('response', JSON.stringify(error));
+      });
   },
 };

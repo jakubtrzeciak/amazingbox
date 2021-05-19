@@ -104,11 +104,6 @@ export default {
   &.mainPageBackground {
     background-image: url('assets/background – mobile.svg');
     background-size: cover;
-
-    @media (min-width: 768px) {
-     background-image: url('assets/background.svg');
-      background-position: right;
-    }
   }
 
   .red {

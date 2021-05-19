@@ -9,12 +9,12 @@
       </figure>
       <h2  uk-scrollspy="cls: uk-animation-slide-bottom; delay: 400; repeat: true">
       Świetny pomysł na prezent dla bliskiej Ci osoby</h2>
-      <TopSlider class="uk-visible@s" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
+      <TopSlider class="uk-visible@m" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
       repeat: true" @clicked="updateStorage">
       </TopSlider>
-      <TopSliderMobile class="uk-hidden@s"
+      <TopSliderMobile class="uk-hidden@m"
       uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
-      repeat: true"></TopSliderMobile>
+      repeat: true"  @clicked="updateStorage"></TopSliderMobile>
     </div>
     <div id="aboutus">
       <div v-for="item in aboutInfo" :key="item.el" :data-name="item.name"

@@ -1,6 +1,6 @@
 <template>
   <div class="email">
-    <form>
+    <form @submit="sendMail($event)">
       <label>
         <span v-if="values.name.value == ''">* Pole obowiązkowe</span>
         <span v-else-if="values.name.value.length < 3" class="red">
@@ -34,6 +34,8 @@
       <input type="submit" value="Wyślij" :disabled="validateEmail() === false"
       :class="{ active: validateEmail() }">
     </form>
+    <span class="uk-label uk-label-success uk-margin"
+    uk-scrollspy="uk-animation-fade; delay: 100; repeat: true" v-if="valid">{{ res_value }}</span>
   </div>
 </template>
 
@@ -42,6 +44,8 @@ export default {
   name: 'Email',
   data() {
     return {
+      valid: false,
+      res_value: '',
       values: {
         name: {
           value: '',
@@ -68,17 +72,14 @@ export default {
     validateEmail() {
       if (this.values.name.value !== '' && this.values.name.value.length >= 3) {
         this.values.name.valid = true;
-        console.log('name!');
       } else this.values.name.valid = false;
 
       if (this.values.email !== '' && this.checkEmail(this.values.email.value)) {
         this.values.email.valid = true;
-        console.log('email!');
       } else this.values.email.valid = false;
 
       if (this.values.message.value !== '' && this.values.message.value.split(' ').length > 5) {
         this.values.message.valid = true;
-        console.log('message!');
       } else this.values.message.valid = false;
 
       if (this.values.name.valid && this.values.email.valid && this.values.message.valid
@@ -88,6 +89,20 @@ export default {
       } else this.values.email_valid = false;
 
       return this.values.email_valid;
+    },
+    sendMail(event) {
+      event.preventDefault();
+      if (this.validateEmail()) {
+        this.$func.sendMail(this.values.name.value,
+          this.values.email.value, this.values.message.value);
+      }
+
+      const res = JSON.parse(localStorage.getItem('response'));
+      if (res.data.valid) {
+        this.valid = res.data.valid;
+        this.res_value = res.data.value;
+        console.log(res.data.value);
+      }
     },
   },
 };

@@ -1,0 +1,8 @@
+{
+    "require": {
+        "sendgrid/sendgrid": "^7.8",
+        "owasp/csrf-protector-php": "dev-master",
+        "mailgun/mailgun-php": "^3.5",
+        "phpmailer/phpmailer": "5.2.8"
+    }
+}
