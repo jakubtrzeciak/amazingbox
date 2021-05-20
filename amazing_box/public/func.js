@@ -42,7 +42,7 @@ export const func = {
   },
 
   sendMail: (name, email, message) => {
-    axios.post('http://localhost:80/amazingbox/connect/connect.php', JSON.stringify({
+    axios.post('connect/connect.php', JSON.stringify({
       name: name,
       email: email,
       message: message,

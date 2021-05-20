@@ -88,7 +88,6 @@ export default {
 
       if (this.values.name.valid && this.values.email.valid && this.values.message.valid
       && this.values.agreement) {
-        console.log('validated!');
         this.values.email_valid = true;
       } else this.values.email_valid = false;
 

@@ -23,7 +23,7 @@
                 uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
 
             </div>
-            <p>{{ desc }}</p>
+            <p class="descPar" v-for="item in desc" :key="item.keyValue">{{ item.value }}</p>
         </div>
 
         <div class="uk-modal-footer uk-text-right">
@@ -38,7 +38,7 @@ export default {
   props: {
     name: String,
     images: Array,
-    desc: String,
+    desc: Array,
     uri: String,
     price: String,
     isActive: Boolean,
@@ -78,7 +78,7 @@ export default {
 
     .uk-modal-body {
         padding: 0;
-        height: 60vh;
+        height: 66vh;
 
         @media (min-width: 960px) {
             height: 85vh;
@@ -103,5 +103,19 @@ export default {
     .uk-slideshow-items {
         height: 220px;
         margin-bottom: 30px;
+    }
+
+    p.descPar {
+
+        &:first-of-type {
+            font-size: 1.1em;
+            text-decoration: underline;
+            color: #3b3b3b;
+            margin-bottom: 15px;
+        }
+
+        &:last-of-type {
+            margin: 20px 0;
+        }
     }
 </style>

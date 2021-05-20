@@ -55,11 +55,8 @@ export default {
     showBoxes() {
       this.boxesData = [];
       const sheetsData = JSON.parse(this.$func.getSheetsData()).data.feed.entry;
-      console.log(sheetsData);
       const productsStocks = JSON.parse(this.$func.getProductsStocks());
-      console.log(productsStocks);
       const productsWindowData = JSON.parse(this.$func.getProdcuctsWindowData());
-      console.log(productsWindowData);
       this.listLenght = productsStocks.data.length;
       if (productsStocks.data.length > 6) this.listLenght = 6;
       for (let i = 0; i < this.listLenght; i += 1) {
@@ -100,7 +97,6 @@ export default {
           }
         }
         this.boxesData.push(productData);
-        console.log(this.boxesData);
         localStorage.setItem('modal-data', JSON.stringify(this.boxesData));
       }
       // end
@@ -111,7 +107,6 @@ export default {
       for (let i = 0; i < modalData.length; i += 1) {
         if (modalData[i].id === activeItem) {
           modalData[i].isActive = true;
-          console.log(modalData[i].id);
         } else {
           modalData[i].isActive = false;
         }

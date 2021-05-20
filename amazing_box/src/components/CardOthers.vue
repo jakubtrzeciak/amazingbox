@@ -3,7 +3,7 @@
     uk-scrollspy-class="uk-animation-fade" @click="openModal()">
     <div class="uk-card uk-card-default">
         <div class="uk-card-media-top" :style="{'background-image':
-                'url(' + `https://drive.google.com/uc?id=${cardImage}&export=download` + ')'}">
+                'url(' + `${cardImage}` + ')'}">
         </div>
         <div class="uk-card-body">
             <h3 class="uk-card-title">{{ cardName }}</h3>
@@ -28,7 +28,6 @@ export default {
       for (let i = 0; i < modalData.length; i += 1) {
         if (modalData[i].id === activeItem) {
           modalData[i].isActive = true;
-          console.log(modalData[i].id);
         } else {
           modalData[i].isActive = false;
         }

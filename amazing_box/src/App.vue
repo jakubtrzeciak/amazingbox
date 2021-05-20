@@ -47,17 +47,36 @@
 
 <script>
 /* eslint-disable func-names */
+/* eslint-disable operator-assignment */
 import Modal from './components/Modal.vue';
 
 export default {
   data() {
     return {
       modalData: [],
+      x: [],
     };
   },
   methods: {
     updateData() {
-      this.modalData = JSON.parse(localStorage.getItem('modal-data'));
+      const x = JSON.parse(localStorage.getItem('modal-data'));
+      let xSplitted = [];
+      let oneObj = {};
+      let descArray = [];
+      for (let i = 0; i < x.length; i += 1) {
+        descArray = [];
+        xSplitted = x[i].desc.split('/');
+        for (let j = 0; j < xSplitted.length; j += 1) {
+          oneObj = {
+            value: xSplitted[j],
+            keyValue: j,
+          };
+          descArray.push(oneObj);
+        }
+        x[i].desc = descArray;
+      }
+
+      this.modalData = x;
     },
   },
   mounted() {
@@ -69,7 +88,6 @@ export default {
     }, 300);
 
     document.body.addEventListener('click', this.updateData);
-    console.log(this.modalData);
   },
   components: {
     Modal,
