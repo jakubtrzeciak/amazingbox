@@ -68,6 +68,12 @@ export default {
     .uk-modal-header {
         text-align: center;
         padding: 10px 0;
+
+        h2 {
+            @media (max-width: 640px) {
+                font-size: 1.4em;
+            }
+        }
     }
 
     .uk-modal-body {

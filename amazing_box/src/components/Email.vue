@@ -34,8 +34,11 @@
       <input type="submit" value="Wyślij" :disabled="validateEmail() === false"
       :class="{ active: validateEmail() }">
     </form>
-    <span class="uk-label uk-label-success uk-margin"
-    uk-scrollspy="uk-animation-fade; delay: 100; repeat: true" v-if="valid">{{ res_value }}</span>
+    <div class="uk-tile uk-padding-small uk-margin">
+        <p class="uk-h4" v-if="valid">Wiadomość została wysłana pomyślnie :)</p>
+        <p class="uk-h4" v-if="valid === true && error !== ''">Błąd wysyłania wiadomości.
+        Odśwież stronę i spróbuj ponownie.</p>
+    </div>
   </div>
 </template>
 
@@ -46,6 +49,7 @@ export default {
     return {
       valid: false,
       res_value: '',
+      error: '',
       values: {
         name: {
           value: '',
@@ -101,7 +105,11 @@ export default {
       if (res.data.valid) {
         this.valid = res.data.valid;
         this.res_value = res.data.value;
-        console.log(res.data.value);
+      } else {
+        this.valid = res.data.valid;
+        this.res_value = res.data.value;
+        this.error = res.data.error;
+        console.log(res.data.error);
       }
     },
   },

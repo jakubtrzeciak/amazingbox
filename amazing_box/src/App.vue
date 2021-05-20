@@ -19,8 +19,10 @@
         <div class="uk-offcanvas-bar">
 
             <button class="uk-offcanvas-close" type="button" uk-close></button>
-
             <ul>
+              <li class="specialLi"><router-link to="/">
+              <img src="./assets/logo-mobile.svg" alt="">
+              </router-link></li>
               <li><router-link to="/" v-scroll-to="'#aboutus'">
               OFERTA</router-link></li>
               <li><router-link to="/" v-scroll-to="'#contactus'">KONTAKT</router-link></li>
@@ -59,10 +61,14 @@ export default {
     },
   },
   mounted() {
+    setTimeout(() => {
+      const viewheight = window.innerHeight;
+      const viewwidth = window.innerWidth;
+      const viewport = document.querySelector('meta[name=viewport]');
+      viewport.setAttribute('content', `height=${viewheight}px, width=${viewwidth}px, initial-scale=1.0`);
+    }, 300);
+
     document.body.addEventListener('click', this.updateData);
-    console.log(this.modalData);
-  },
-  updated() {
     console.log(this.modalData);
   },
   components: {
@@ -130,6 +136,15 @@ export default {
     border: none;
     color: #2c3e50;
     font-size: 1.2em;
+  }
+
+  .specialLi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #3b3b3b;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .uk-offcanvas-bar {

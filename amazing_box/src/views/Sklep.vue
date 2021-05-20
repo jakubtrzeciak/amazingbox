@@ -23,10 +23,34 @@
       <div v-if="item.active"
       class="boxesArea uk-child-width-1-5@l uk-child-width-1-4@m
       uk-child-width-1-2@s uk-padding-large cards" uk-grid
-      uk-scrollspy="target: > a; cls: uk-animation-fade; repeat: true; delay: 80">
+      uk-scrollspy="target: > a; cls: uk-animation-fade; delay: 80">
         <CardOthers v-for="el in item.boxesData" :key="el.id"
         :cardId="el.id" :cardName="el.name" :cardImage="el.image"
         @clicked="updateStorage"></CardOthers>
+      </div>
+    </div>
+  </div>
+  <div id="summary">
+    <div class="uk-grid-collapse uk-text-center" uk-grid>
+      <div class="uk-width-1-2@s uk-width-3-5@m">
+          <div class="left-hand">
+            <p class="head">Jeśli masz pomysł na własną kompozycję prezentu,
+            skontaktuj się ze mną :)</p>
+
+            <div class="pos">
+              <a href="mailto:agnieszkaamazingbox@gmail.com">NAPISZ</a>
+              <p>agnieszkaamazingbox@gmail.com</p>
+            </div>
+
+             <div class="pos">
+              <a href="tel:+48515024635">ZADZWOŃ</a>
+              <p>+48 515 024 635</p>
+            </div>
+          </div>
+      </div>
+      <div class="uk-width-1-2 uk-width-2-5@m uk-visible@s">
+          <div class="image uk-background-primary uk-light">
+          </div>
       </div>
     </div>
   </div>
@@ -295,5 +319,62 @@ h2 {
       }
     }
   }
+}
+
+#summary {
+  background-color: #ffffff;
+
+  .left-hand {
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 25% 0 25%;
+
+    @media (max-width: 960px) {
+      padding: 0 10% 0 10%;
+    }
+
+    .head {
+      font-size: 1.3em;
+      margin-bottom: 10%;
+    }
+
+    .pos {
+      width: 90%;
+      margin: 10px auto;
+      a,p {
+        margin: 7px auto;
+      }
+
+      a {
+        padding: 6px 0;
+        display: block;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        color: white;
+        border: none;
+        font-size: 1.1em;
+        border-radius: 30px;
+        background-color: #900000;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .image {
+    height: 100%;
+    background-image: url('../assets/photos/agnieszka.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.uk-grid-collapse {
+  height: 100vh;
 }
 </style>

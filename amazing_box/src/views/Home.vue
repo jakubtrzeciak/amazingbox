@@ -32,7 +32,7 @@
       <div class="pos">
         <h2 class="head" uk-scrollspy="cls: uk-animation-slide-top; delay: 200; repeat: true">
         MASZ PYTANIE?</h2>
-        <Email uk-scrollspy="cls: uk-animation-slide-bottom; delay: 340; repeat: true"></Email>
+        <Email uk-scrollspy="cls: uk-animation-slide-bottom; delay: 340;"></Email>
       </div>
     </div>
     <div id="info" uk-scrollspy="uk-animation-fade; repeat: true;">
@@ -367,6 +367,11 @@ h2 {
 
     @media (max-width: 960px) {
       width: 90%;
+    }
+
+    @media (max-width: 640px) {
+      width: 80%;
+      font-size: 1.4em;
     }
   }
 
