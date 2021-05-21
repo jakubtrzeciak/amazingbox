@@ -9,12 +9,9 @@
       </figure>
       <h2  uk-scrollspy="cls: uk-animation-slide-bottom; delay: 400; repeat: true">
       Świetny pomysł na prezent dla bliskiej Ci osoby</h2>
-      <TopSlider class="uk-visible@s" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
+      <TopSlider uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
       repeat: true" @clicked="updateStorage">
       </TopSlider>
-      <TopSliderMobile class="uk-hidden@s"
-      uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;
-      repeat: true"  @clicked="updateStorage"></TopSliderMobile>
     </div>
     <div id="aboutus">
       <div v-for="item in aboutInfo" :key="item.el" :data-name="item.name"
@@ -73,7 +70,6 @@
 
 <script>
 import TopSlider from '../components/TopSlider.vue';
-import TopSliderMobile from '../components/TopSliderMobile.vue';
 import Email from '../components/Email.vue';
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue';
@@ -123,7 +119,7 @@ export default {
         {
           el: 2,
           icon_name: 'icon-heart',
-          par: 'W każdy zestaw wkładam ogromny kawał swojego serca.',
+          par: 'W każdy zestaw wkładam ogromny kawałek swojego serca.',
         },
         {
           el: 3,
@@ -157,7 +153,6 @@ export default {
   },
   components: {
     TopSlider,
-    TopSliderMobile,
     Email,
   },
   mounted() {
@@ -171,9 +166,6 @@ export default {
 <style lang="scss" scoped>
 .home {
   padding-bottom: 1em;
-  @media (min-width: 321px) and (max-width: 768px) {
-    height: 85vh;
-  }
 
   @media (min-width: 1500px) {
     height: 85vh;
@@ -260,12 +252,13 @@ h2 {
 
     @media (max-width: 960px) {
       width: 100%;
-      background-color: rgba(0,0,0,0);
     }
 
     h3 {
       font-size: 1.8em;
       font-weight: 700;
+      box-sizing: border-box;
+      padding: 0 10%;
     }
 
     p {

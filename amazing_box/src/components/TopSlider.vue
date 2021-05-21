@@ -1,5 +1,5 @@
 <template>
-<div uk-slider="autoplay: true">
+<div  uk-slider="autoplay: true">
 
     <div class="uk-position-relative outer">
 
@@ -14,7 +14,7 @@
                 'url(' + `${item.image}` + ')'}">
                     <div class="uk-position-center uk-panel">
                       <div class="info">
-                        <p>{{item.name}}</p>
+                        <h3>{{item.name}}</h3>
                       </div>
                     </div>
                 </a>
@@ -42,11 +42,15 @@
 
 <script>
 /* eslint-disable prefer-destructuring */
+/* eslint-disable arrow-parens */
 export default {
   data() {
     return {
       name: 'TopSlider',
       boxesData: [],
+      sheetsData: '',
+      productsStocks: '',
+      productsWindowData: '',
       photo: '',
       listLength: 0,
     };
@@ -54,43 +58,40 @@ export default {
   methods: {
     showBoxes() {
       this.boxesData = [];
-      const sheetsData = JSON.parse(this.$func.getSheetsData()).data.feed.entry;
-      const productsStocks = JSON.parse(this.$func.getProductsStocks());
-      const productsWindowData = JSON.parse(this.$func.getProdcuctsWindowData());
-      this.listLenght = productsStocks.data.length;
-      if (productsStocks.data.length > 6) this.listLenght = 6;
-      for (let i = 0; i < this.listLenght; i += 1) {
+      if (this.productsStocks.length > 6) this.listLenght = 6;
+      let i = 0;
+      while (i < this.listLength) {
         this.photo = '';
         let row = '';
         const imagesTable = [];
         let description = '';
         let imageCounter = 2;
-        for (let k = 0; k < sheetsData.length; k += 1) {
-          if (sheetsData[k].gs$cell.inputValue === productsStocks.data[i].seller_id) {
-            row = sheetsData[k].gs$cell.row;
+        for (let k = 0; k < this.sheetsData.length; k += 1) {
+          if (this.sheetsData[k].gs$cell.inputValue === this.productsStocks[i].seller_id) {
+            row = this.sheetsData[k].gs$cell.row;
           }
 
-          if (sheetsData[k].gs$cell.row === row
-          && sheetsData[k].gs$cell.col === imageCounter.toString()) {
+          if (this.sheetsData[k].gs$cell.row === row
+          && this.sheetsData[k].gs$cell.col === imageCounter.toString()) {
             const ImagesData = {};
-            ImagesData.value = sheetsData[k].gs$cell.inputValue.split('/')[5];
+            ImagesData.value = this.sheetsData[k].gs$cell.inputValue.split('/')[5];
             ImagesData.el = imageCounter;
             imagesTable.push(ImagesData);
             imageCounter += 1;
           }
 
-          if (sheetsData[k].gs$cell.col === '7' && sheetsData[k].gs$cell.row === row) {
-            description = sheetsData[k].gs$cell.inputValue;
+          if (this.sheetsData[k].gs$cell.col === '7' && this.sheetsData[k].gs$cell.row === row) {
+            description = this.sheetsData[k].gs$cell.inputValue;
           }
         }
         const productData = {};
-        for (let j = 0; j < productsWindowData.data.length; j += 1) {
-          if (productsStocks.data[i].seller_id === productsWindowData.data[j].seller_id) {
-            productData.id = productsWindowData.data[j].seller_id;
-            productData.name = productsWindowData.data[j].name;
-            productData.uri = productsWindowData.data[j].short_code_uri;
-            productData.price = productsWindowData.data[j].price.formatted;
-            productData.image = productsWindowData.data[j].image_thumbnail;
+        for (let j = 0; j < this.productsWindowData.length; j += 1) {
+          if (this.productsStocks[i].seller_id === this.productsWindowData[j].seller_id) {
+            productData.id = this.productsWindowData[j].seller_id;
+            productData.name = this.productsWindowData[j].name;
+            productData.uri = this.productsWindowData[j].short_code_uri;
+            productData.price = this.productsWindowData[j].price.formatted;
+            productData.image = this.productsWindowData[j].image_thumbnail;
             productData.images = imagesTable;
             productData.desc = description;
             productData.isActive = false;
@@ -98,6 +99,7 @@ export default {
         }
         this.boxesData.push(productData);
         localStorage.setItem('modal-data', JSON.stringify(this.boxesData));
+        i += 1;
       }
       // end
     },
@@ -114,9 +116,24 @@ export default {
 
       this.$emit('clicked', modalData);
     },
+    importData() {
+      this.$func.getSheetsData().then(res => {
+        this.sheetsData = res;
+
+        this.$func.getProductsStocks().then(res1 => {
+          this.productsStocks = res1;
+          this.listLength = res1.length;
+
+          this.$func.getProdcuctsWindowData().then(res2 => {
+            this.productsWindowData = res2;
+            this.showBoxes();
+          });
+        });
+      });
+    },
   },
   mounted() {
-    this.showBoxes();
+    this.importData();
   },
 };
 </script>
@@ -126,14 +143,16 @@ export default {
         width: 55%;
         margin: auto;
 
-        @media (min-width: 768px) and (max-width: 1365px) {
+        @media (min-width: 541px) and (max-width: 1365px) {
           width: 75%;
+        }
+
+        @media (max-width: 540px) {
+          width: 100%;
         }
 
         a {
             height: auto;
-            box-sizing: border-box;
-            padding: 10px;
             position: relative;
 
             &.item {
@@ -141,11 +160,17 @@ export default {
               box-sizing: border-box;
               background-size: cover;
               background-position: center;
-            }
 
-            .uk-panel {
-              height: auto;
-              opacity: 0.9;
+              @media (max-width: 640px) {
+                width: 100%;
+              }
+
+              h3 {
+                box-sizing: border-box;
+                padding: 0 15px;
+                text-shadow: 1px 1px 2px #000000;
+                font-size: 1.1em;
+              }
             }
         }
 
@@ -153,14 +178,5 @@ export default {
           border-radius: 5px 5px 2px 2px;
           max-width: 100%;
         }
-
-        .info {
-          font-size: 1.15em;
-        }
-    }
-
-    uk-slider-container a {
-      box-sizing: border-box;
-      padding-left: 10px;
     }
 </style>

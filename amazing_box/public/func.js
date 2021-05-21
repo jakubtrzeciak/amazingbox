@@ -1,5 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable object-shorthand */
+/* eslint-disable  arrow-body-style */
+/* eslint-disable  arrow-parens */
 import axios from 'axios';
 
 export const func = {
@@ -11,11 +13,8 @@ export const func = {
       },
     };
 
-    axios.get('https://api.1cart.eu/v1/products/all', options)
-      .then((resp1) => {
-        localStorage.setItem('all-products', JSON.stringify(resp1));
-      });
-    return localStorage.getItem('all-products');
+    return axios.get('https://api.1cart.eu/v1/products/all', options)
+      .then(resp1 => resp1.data);
   },
 
   getProductsStocks: () => {
@@ -26,19 +25,13 @@ export const func = {
       },
     };
 
-    axios.get('https://api.1cart.eu/v1/stocks/all', options)
-      .then((resp1) => {
-        localStorage.setItem('stocks', JSON.stringify(resp1));
-      });
-    return localStorage.getItem('stocks');
+    return axios.get('https://api.1cart.eu/v1/stocks/all', options)
+      .then(resp1 => resp1.data);
   },
 
   getSheetsData: () => {
-    axios.get('https://spreadsheets.google.com/feeds/cells/1sZCYphAXYbdaC7R8o2KLQe9acLxqO9vJAkLznfhCd8U/1/public/full?alt=json')
-      .then((resp1) => {
-        localStorage.setItem('sheets', JSON.stringify(resp1));
-      });
-    return localStorage.getItem('sheets');
+    return axios.get('https://spreadsheets.google.com/feeds/cells/1sZCYphAXYbdaC7R8o2KLQe9acLxqO9vJAkLznfhCd8U/1/public/full?alt=json')
+      .then(resp1 => resp1.data.feed.entry);
   },
 
   sendMail: (name, email, message) => {
@@ -53,5 +46,7 @@ export const func = {
       .catch((error) => {
         localStorage.setItem('response', JSON.stringify(error));
       });
+
+    return localStorage.getItem('response');
   },
 };

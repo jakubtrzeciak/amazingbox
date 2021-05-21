@@ -96,19 +96,18 @@ export default {
     sendMail(event) {
       event.preventDefault();
       if (this.validateEmail()) {
-        this.$func.sendMail(this.values.name.value,
-          this.values.email.value, this.values.message.value);
-      }
+        const res = JSON.parse(this.$func.sendMail(this.values.name.value,
+          this.values.email.value, this.values.message.value));
 
-      const res = JSON.parse(localStorage.getItem('response'));
-      if (res.data.valid) {
-        this.valid = res.data.valid;
-        this.res_value = res.data.value;
-      } else {
-        this.valid = res.data.valid;
-        this.res_value = res.data.value;
-        this.error = res.data.error;
-        console.log(res.data.error);
+        if (res) {
+          this.valid = res.data.valid;
+          this.res_value = res.data.value;
+
+          if (res.data.valid === false) {
+            this.error = res.data.error;
+            console.log(res.data.error);
+          }
+        }
       }
     },
   },

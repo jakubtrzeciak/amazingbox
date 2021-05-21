@@ -43,8 +43,8 @@
             </div>
 
              <div class="pos">
-              <a href="tel:+48515024635">ZADZWOŃ</a>
-              <p>+48 515 024 635</p>
+              <a href="tel:+48515283892">ZADZWOŃ</a>
+              <p>+48 515 283 892</p>
             </div>
           </div>
       </div>
@@ -59,6 +59,7 @@
 
 <script lang="javascript">
 /* eslint-disable prefer-destructuring */
+/* eslint-disable arrow-parens */
 import CardOthers from '../components/CardOthers.vue';
 
 export default {
@@ -66,26 +67,31 @@ export default {
     return {
       modalData: [],
       photo: '',
+      sheetsData: '',
+      productsWindowData: '',
+      productsStocks: '',
+      dataActive: 0,
       types: [
         {
           type_id: 0,
           name: 'Zestawy Prezentowe',
           active: true,
-          sheetsData: '',
           boxesData: [],
           showBoxes: (ind) => {
+            console.log(this.sheetsData);
+            console.log(this.productsWindowData);
+            console.log(this.productsStocks);
             this.types[ind].boxesData = [];
-            const productsStocks = JSON.parse(this.$func.getProductsStocks());
-            const productsWindowData = JSON.parse(this.$func.getProdcuctsWindowData());
-
-            for (let i = 0; i < productsStocks.data.length; i += 1) {
+            let i = 0;
+            while (i < this.productsStocks.length) {
               this.photo = '';
               let row = '';
               const imagesTable = [];
               let description = '';
               let imageCounter = 2;
               for (let k = 0; k < this.sheetsData.length; k += 1) {
-                if (this.sheetsData[k].gs$cell.inputValue === productsStocks.data[i].seller_id) {
+                if (this.sheetsData[k].gs$cell.inputValue
+                === this.productsStocks[i].seller_id) {
                   row = this.sheetsData[k].gs$cell.row;
                 }
                 if (this.sheetsData[k].gs$cell.col === '2' && this.sheetsData[k].gs$cell.row === row) {
@@ -106,20 +112,22 @@ export default {
                 }
               }
               const productData = {};
-              for (let j = 0; j < productsWindowData.data.length; j += 1) {
-                if (productsStocks.data[i].seller_id === productsWindowData.data[j].seller_id
-                && productsWindowData.data[i].name.split(' ')[0] === 'Zestaw') {
-                  productData.id = productsWindowData.data[j].seller_id;
-                  productData.name = productsWindowData.data[j].name;
-                  productData.uri = productsWindowData.data[j].short_code_uri;
-                  productData.price = productsWindowData.data[j].price.formatted;
-                  productData.image = productsWindowData.data[j].image_thumbnail;
+              for (let j = 0; j < this.productsWindowData.length; j += 1) {
+                if (this.productsStocks[i].seller_id
+                === this.productsWindowData[j].seller_id
+                && this.productsWindowData[i].name.split(' ')[0] === 'Zestaw') {
+                  productData.id = this.productsWindowData[j].seller_id;
+                  productData.name = this.productsWindowData[j].name;
+                  productData.uri = this.productsWindowData[j].short_code_uri;
+                  productData.price = this.productsWindowData[j].price.formatted;
+                  productData.image = this.productsWindowData[j].image_thumbnail;
                   productData.images = imagesTable;
                   productData.desc = description;
                   productData.isActive = false;
                   this.types[ind].boxesData.push(productData);
                 }
               }
+              i += 1;
             }
             localStorage.setItem('modal-data', JSON.stringify(this.types[ind].boxesData));
           },
@@ -131,16 +139,16 @@ export default {
           boxesData: [],
           showBoxes: (ind) => {
             this.types[ind].boxesData = [];
-            const productsStocks = JSON.parse(this.$func.getProductsStocks());
-            const productsWindowData = JSON.parse(this.$func.getProdcuctsWindowData());
-            for (let i = 0; i < productsStocks.data.length; i += 1) {
+            let i = 0;
+            while (i < this.productsStocks.length) {
               this.photo = '';
               let row = '';
               const imagesTable = [];
               let description = '';
               let imageCounter = 2;
               for (let k = 0; k < this.sheetsData.length; k += 1) {
-                if (this.sheetsData[k].gs$cell.inputValue === productsStocks.data[i].seller_id) {
+                if (this.sheetsData[k].gs$cell.inputValue
+                === this.productsStocks[i].seller_id) {
                   row = this.sheetsData[k].gs$cell.row;
                 }
                 if (this.sheetsData[k].gs$cell.col === '2' && this.sheetsData[k].gs$cell.row === row) {
@@ -161,19 +169,21 @@ export default {
                 }
               }
               const productData = {};
-              for (let j = 0; j < productsWindowData.data.length; j += 1) {
-                if (productsStocks.data[i].seller_id === productsWindowData.data[j].seller_id) {
-                  productData.id = productsWindowData.data[j].seller_id;
-                  productData.name = productsWindowData.data[j].name;
-                  productData.uri = productsWindowData.data[j].short_code_uri;
-                  productData.price = productsWindowData.data[j].price.formatted;
-                  productData.image = productsWindowData.data[j].image_thumbnail;
+              for (let j = 0; j < this.productsWindowData.length; j += 1) {
+                if (this.productsStocks[i].seller_id
+                === this.productsWindowData[j].seller_id) {
+                  productData.id = this.productsWindowData[j].seller_id;
+                  productData.name = this.productsWindowData[j].name;
+                  productData.uri = this.productsWindowData[j].short_code_uri;
+                  productData.price = this.productsWindowData[j].price.formatted;
+                  productData.image = this.productsWindowData[j].image_thumbnail;
                   productData.images = imagesTable;
                   productData.desc = description;
                   productData.isActive = false;
                 }
               }
               this.types[ind].boxesData.push(productData);
+              i += 1;
             }
             localStorage.setItem('modal-data', JSON.stringify(this.types[ind].boxesData));
             // end
@@ -195,20 +205,34 @@ export default {
     updateStorage(value) {
       localStorage.setItem('modal-data', JSON.stringify(value));
       this.modalData = value;
-      this.$modalActive = true;
+    },
+    importData() {
+      this.$func.getSheetsData().then(res => {
+        this.sheetsData = res;
+
+        this.$func.getProductsStocks().then(res1 => {
+          this.productsStocks = res1;
+
+          this.$func.getProdcuctsWindowData().then(res2 => {
+            this.productsWindowData = res2;
+            this.types[this.dataActive].showBoxes(this.dataActive);
+          });
+        });
+      });
     },
   },
   mounted() {
-    this.sheetsData = JSON.parse(this.$func.getSheetsData()).data.feed.entry;
     const app = document.getElementById('app');
     app.classList.remove('mainPageBackground');
     app.classList.add('shopBackground');
 
     for (let a = 0; a < this.types.length; a += 1) {
       if (this.types[a].active) {
-        this.types[a].showBoxes(a);
+        this.dataActive = a;
       }
     }
+
+    this.importData();
   },
   components: {
     CardOthers,
