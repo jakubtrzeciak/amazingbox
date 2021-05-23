@@ -63,6 +63,10 @@
         <p>&copy; 2021 AmazingBox.pl</p>
         <p>Produkcja: <a href="https://eyewebcompany.pl"
         target="_blank">Eye Web Company</a></p>
+        <p><a href="https://amazingbox.pl/regulamin-sklepu.pdf"
+        target="_blank">Regulamin sklepu</a> |
+        <a href="https://amazingbox.pl/polityka-prywatnosci.pdf"
+        target="_blank">Polityka prywatności</a></p>
       </div>
     </div>
   </div>
@@ -166,7 +170,6 @@ export default {
 <style lang="scss" scoped>
 .home {
   padding-bottom: 1em;
-
   @media (min-width: 1500px) {
     height: 85vh;
   }

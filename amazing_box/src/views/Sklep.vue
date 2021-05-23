@@ -46,6 +46,12 @@
               <a href="tel:+48515283892">ZADZWOŃ</a>
               <p>+48 515 283 892</p>
             </div>
+            <div class="links">
+              <p><a href="https://amazingbox.pl/regulamin-sklepu.pdf"
+              target="_blank">Regulamin sklepu</a> |
+              <a href="https://amazingbox.pl/polityka-prywatnosci.pdf"
+              target="_blank">Polityka prywatności</a></p>
+            </div>
           </div>
       </div>
       <div class="uk-width-1-2 uk-width-2-5@m uk-visible@s">
@@ -78,9 +84,6 @@ export default {
           active: true,
           boxesData: [],
           showBoxes: (ind) => {
-            console.log(this.sheetsData);
-            console.log(this.productsWindowData);
-            console.log(this.productsStocks);
             this.types[ind].boxesData = [];
             let i = 0;
             while (i < this.productsStocks.length) {
@@ -124,7 +127,10 @@ export default {
                   productData.images = imagesTable;
                   productData.desc = description;
                   productData.isActive = false;
-                  this.types[ind].boxesData.push(productData);
+                  if (productData.id === this.productsStocks[i].seller_id
+                  && this.productsStocks[i].available_quantity > 0) {
+                    this.types[ind].boxesData.push(productData);
+                  }
                 }
               }
               i += 1;
@@ -182,7 +188,10 @@ export default {
                   productData.isActive = false;
                 }
               }
-              this.types[ind].boxesData.push(productData);
+              if (productData.id === this.productsStocks[i].seller_id
+              && this.productsStocks[i].available_quantity > 0) {
+                this.types[ind].boxesData.push(productData);
+              }
               i += 1;
             }
             localStorage.setItem('modal-data', JSON.stringify(this.types[ind].boxesData));
@@ -339,6 +348,7 @@ h2 {
 
 #summary {
   background-color: #ffffff;
+  position: relative;
 
   .left-hand {
     height: 100vh;
@@ -354,6 +364,15 @@ h2 {
       padding: 0 10% 0 10%;
     }
 
+    .links {
+      position: absolute;
+      bottom: 20px;
+
+      a {
+        color: #3b3b3b;
+      }
+    }
+
     .head {
       font-size: 1.3em;
       margin-bottom: 10%;
@@ -362,6 +381,7 @@ h2 {
     .pos {
       width: 90%;
       margin: 10px auto;
+
       a,p {
         margin: 7px auto;
       }

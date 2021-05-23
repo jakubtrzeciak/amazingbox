@@ -24,6 +24,8 @@
 
             </div>
             <p class="descPar" v-for="item in desc" :key="item.keyValue">{{ item.value }}</p>
+            <a href="https://amazingbox.pl/regulamin-sklepu.pdf"
+            target="_blank" class="reg">Regulamin sklepu internetowego</a>
         </div>
 
         <div class="uk-modal-footer uk-text-right">
@@ -84,11 +86,18 @@ export default {
             height: 85vh;
         }
 
-            p {
-                padding: 0 1em;
-                margin: 0;
-                margin-top: 10px;
-            }
+        p {
+            padding: 0 1em;
+            margin: 0;
+            margin-top: 10px;
+        }
+
+        a.reg {
+            display: block;
+            margin: 10px 15px;
+            text-decoration: underline;
+            color: #900000;
+        }
     }
 
     .uk-modal-body .uk-panel {
@@ -115,7 +124,7 @@ export default {
         }
 
         &:last-of-type {
-            margin: 20px 0;
+            margin: 20px 0 0 0;
         }
     }
 </style>

@@ -97,8 +97,11 @@ export default {
             productData.isActive = false;
           }
         }
-        this.boxesData.push(productData);
-        localStorage.setItem('modal-data', JSON.stringify(this.boxesData));
+        if (productData.id === this.productsStocks[i].seller_id
+        && this.productsStocks[i].available_quantity > 0) {
+          this.boxesData.push(productData);
+          localStorage.setItem('modal-data', JSON.stringify(this.boxesData));
+        }
         i += 1;
       }
       // end
@@ -163,13 +166,23 @@ export default {
 
               @media (max-width: 640px) {
                 width: 100%;
+                height: 210px;
+              }
+
+              @media (min-width: 400px) and (max-width: 640px) {
+                height: 250px;
               }
 
               h3 {
                 box-sizing: border-box;
-                padding: 0 15px;
-                text-shadow: 1px 1px 2px #000000;
+                width: 65%;
+                margin: auto;
+                text-shadow: 1.5px 1.5px 2px #000000;
                 font-size: 1.1em;
+
+                @media (max-width: 640px) {
+                  font-size: 1.4em;
+                }
               }
             }
         }

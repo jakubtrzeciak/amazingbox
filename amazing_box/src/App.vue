@@ -96,6 +96,10 @@ export default {
 </script>
 
 <style lang="scss">
+#cookie_law_notification {
+  bottom: 70px !important;
+}
+
 #app {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;

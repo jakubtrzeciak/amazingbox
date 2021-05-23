@@ -27,7 +27,8 @@
         <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
             <label><input class="uk-checkbox" type="checkbox" @change="validateEmail()"
             v-model="values.agreement">
-            Wyrażam zgodę na przetwarzanie moich danych osobowych, zgodnie z <a href="#">polityką
+            Wyrażam zgodę na przetwarzanie moich danych osobowych, zgodnie z
+            <a href="https://amazingbox.pl/polityka-prywatnosci.pdf" target="_blank">polityką
             prywatności</a>, w celu udzielenia odpowiedzi na powyższą wiadomość.</label>
         </div>
       </label>
