@@ -47,10 +47,15 @@
               <p>+48 515 283 892</p>
             </div>
             <div class="links">
+              <div class="production">
+                <p>&copy; 2021 AmazingBox.pl</p>
+                <p>Produkcja: <a href="https://eyewebcompany.pl"
+                target="_blank">Eye Web Company</a></p>
+              </div>
               <p><a href="https://amazingbox.pl/regulamin-sklepu.pdf"
-              target="_blank">Regulamin sklepu</a> |
-              <a href="https://amazingbox.pl/polityka-prywatnosci.pdf"
-              target="_blank">Polityka prywatności</a></p>
+                target="_blank">Regulamin sklepu</a>|
+                <a href="https://amazingbox.pl/polityka-prywatnosci.pdf"
+                target="_blank">Polityka prywatności</a></p>
             </div>
           </div>
       </div>
@@ -318,7 +323,7 @@ h2 {
     justify-content: center;
     position: sticky;
     top: 0;
-    z-index: 3;
+    z-index: 2;
     background-color: #ffffff;
     box-shadow: 0 2px 7px rgba(82, 82, 82, 0.2);
 
@@ -367,9 +372,29 @@ h2 {
     .links {
       position: absolute;
       bottom: 20px;
+      font-size: 0.8em;
 
-      a {
+      @media (max-width: 640px) {
+        font-size: 0.7em;
+        padding-bottom: 15px;
+      }
+
+      @media(max-width: 960px) {
+        bottom: calc(100vh - (100vh - 54px));
+      }
+
+      p,a {
         color: #3b3b3b;
+        margin: 0 5px;
+      }
+
+      .production {
+        p {
+          margin: 0;
+          &:first-of-type {
+            font-size: 1.5em;
+          }
+        }
       }
     }
 
@@ -398,6 +423,16 @@ h2 {
         border-radius: 30px;
         background-color: #900000;
         cursor: pointer;
+
+        @media (max-width: 640px) {
+          font-size: 1em;
+        }
+      }
+
+      p {
+        @media (max-width: 640px) {
+          font-size: 0.85em;
+        }
       }
     }
   }

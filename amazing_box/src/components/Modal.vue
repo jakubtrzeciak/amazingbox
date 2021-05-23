@@ -80,7 +80,7 @@ export default {
 
     .uk-modal-body {
         padding: 0;
-        height: 66vh;
+        margin: 0;
 
         @media (min-width: 960px) {
             height: 85vh;

@@ -40,6 +40,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  z-index: 0;
+}
+
 .uk-card-media-top {
   height: 240px;
   background-size: cover;

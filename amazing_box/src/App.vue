@@ -1,5 +1,17 @@
 <template>
   <div id="app">
+  <span uk-icon="info" class="shipping-modal" uk-toggle="target: #free-shipping-modal"></span>
+    <div id="free-shipping-modal" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body">
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+          <h2 class="uk-modal-title">Darmowa dostawa!</h2>
+          <h5 class="uk-margin-small">Drogi użytkowniku, nasz sklep
+          oferuje darmową dostawę na terenie Olsztyna
+          (warmińsko-mazurskie).</h5> <h5 class="uk-margin-remove"> Przy wybieraniu opcji dostawy
+          należy wybrać "Transport sprzedawcy"
+          i wpisać adres, na który Twój Amazing Box zostanie dostarczony.</h5>
+      </div>
+    </div>
     <div id="nav" class="uk-margin-auto uk-visible@m">
       <div class="centerNav uk-margin-auto uk-flex uk-flex-center uk-text-center">
         <router-link to="/">OFERTA</router-link>
@@ -11,27 +23,38 @@
     <div id="navMobile" class="uk-hidden@m"  uk-sticky>
       <router-link class="red" to="/kupuj" v-scroll-to="'.shopFirst'">
       SKLEP <i class="icon-basket"></i></router-link>
-      <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-flip">
-      &lt; MENU
+      <button class="uk-button uk-button-default menu-button" type="button"
+      uk-toggle="target: #offcanvas-nav-primary">
+      <span uk-icon="icon: chevron-left; ratio: 1.15"></span> MENU
       </button>
-
-      <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
-        <div class="uk-offcanvas-bar">
-
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
-            <ul>
-              <li class="specialLi"><router-link to="/">
-              <img src="./assets/logo-mobile.svg" alt="">
-              </router-link></li>
-              <li><router-link to="/" v-scroll-to="'#aboutus'">
-              OFERTA</router-link></li>
-              <li><router-link to="/" v-scroll-to="'#contactus'">KONTAKT</router-link></li>
-              <li><router-link to="/" v-scroll-to="'#offer'">O NAS</router-link></li>
-            </ul>
-
-        </div>
-      </div>
     </div>
+     <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true; flip: true;">
+          <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-background-muted">
+
+              <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                  <li class="uk-parent"  @click="hideCanvas()">
+                      <router-link to="/" v-scroll-to="'#app'"><img src="./assets/logo-mobile.svg"
+                      alt="Logo"></router-link>
+                      <ul class="uk-nav-sub">
+                          <li @click="hideCanvas()">
+                          <router-link to="/kupuj">
+                          Pełna oferta sklepu</router-link></li>
+                          <li @click="hideCanvas()">
+                          <router-link to="/" v-scroll-to="'#aboutus'">
+                          Wprowadzenie</router-link></li>
+                          <li @click="hideCanvas()">
+                          <router-link to="/" v-scroll-to="'#contactus'">
+                          Skontaktuj się</router-link></li>
+                          <li @click="hideCanvas()">
+                          <router-link to="/" v-scroll-to="'#offer'">
+                          Trochę o nas</router-link></li>
+                      </ul>
+                  </li>
+                  <li class="uk-nav-divider"></li>
+              </ul>
+
+          </div>
+      </div>
     <router-view/>
     <div id="modal-overflow" uk-modal>
        <Modal v-for="item in modalData" :key="item.id"
@@ -48,6 +71,7 @@
 <script>
 /* eslint-disable func-names */
 /* eslint-disable operator-assignment */
+import UIkit from 'uikit';
 import Modal from './components/Modal.vue';
 
 export default {
@@ -78,6 +102,16 @@ export default {
 
       this.modalData = x;
     },
+    hideCanvas() {
+      UIkit.offcanvas('#offcanvas-nav-primary').hide();
+    },
+    showShippingModal() {
+      if (sessionStorage.getItem('free-shipping-modal') === null) {
+        console.log('Activated');
+        UIkit.modal('#free-shipping-modal').show();
+        sessionStorage.setItem('free-shipping-modal', 'active');
+      }
+    },
   },
   mounted() {
     setTimeout(() => {
@@ -87,6 +121,7 @@ export default {
       viewport.setAttribute('content', `height=${viewheight}px, width=${viewwidth}px, initial-scale=1.0`);
     }, 300);
 
+    this.showShippingModal();
     document.body.addEventListener('click', this.updateData);
   },
   components: {
@@ -98,6 +133,23 @@ export default {
 <style lang="scss">
 #cookie_law_notification {
   bottom: 70px !important;
+}
+
+#offcanvas-nav-primary {
+  z-index: 3;
+}
+
+.shipping-modal {
+  position: fixed;
+  z-index: 1;
+  right: 30px;
+  top: 50px;
+
+  @media (min-width: 960px) {
+    top: 30px;
+    right: 40px;
+    transform: scale(1.2);
+  }
 }
 
 #app {
@@ -160,27 +212,32 @@ export default {
     font-size: 1.2em;
   }
 
-  .specialLi {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-bottom: 1px solid #3b3b3b;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-  }
-
-  .uk-offcanvas-bar {
-    background-color: #ffffff;
-    color: inherit;
-  }
-
   ul {
     list-style: none;
-    padding: 30px 0;
+  }
 
-    li {
-      margin: 10px 0;
+  .menu-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.uk-offcanvas-bar .uk-nav-primary .uk-nav-sub {
+
+  li{
+    background-color: #efefef;
+    margin: 10px 0;
+    &:first-of-type {
+      a {
+        color: #900000;
+      }
     }
+  }
+  a {
+    color: #3b3b3b;
+    padding: 5px 0;
+    font-size: 1.1em;
   }
 }
 
@@ -201,6 +258,14 @@ export default {
   a {
     color: #2c3e50;
     padding: 10px 30px;
+  }
+}
+
+#modal-overflow {
+  padding: 0;
+
+  @media (max-width: 960px) {
+    height: calc(100vh - 54px);
   }
 }
 </style>
