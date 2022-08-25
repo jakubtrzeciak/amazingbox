@@ -1,2 +1,2 @@
 # amazingbox
-Amazing Store with Amazing Gift Boxes
+A site for selling products with services of 1koszyk.pl
